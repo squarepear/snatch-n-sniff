@@ -1,8 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=6 format=3 uid="uid://c0u7xsue61tia"]
+
+[ext_resource type="Texture2D" uid="uid://dw0do2yfovygb" path="res://icon.svg" id="1_exoxq"]
+[ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_ue6bc"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_smecd"]
+size = Vector2(20, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f23cw"]
+size = Vector3(20, 0.1, 20)
+
+[sub_resource type="Environment" id="Environment_0aog6"]
+background_mode = 1
+background_color = Color(1, 0.541176, 0.639216, 1)
 
 [node name="Convention" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
 mesh = SubResource("PlaneMesh_smecd")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0503591, 0)
+shape = SubResource("BoxShape3D_f23cw")
+
+[node name="Guy" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.330011, 0)
+pixel_size = 0.005
+texture = ExtResource("1_exoxq")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.36777, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0aog6")
+
+[node name="Player" parent="." instance=ExtResource("2_ue6bc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00298357, 0.0071401, 0.941399)
