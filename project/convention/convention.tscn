@@ -29,6 +29,7 @@ shape = SubResource("BoxShape3D_f23cw")
 [node name="Guy" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.330011, 0)
 pixel_size = 0.005
+billboard = 2
 texture = ExtResource("1_exoxq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
