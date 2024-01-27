@@ -93,6 +93,8 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/godot,macos,linux,windows
 
+*.blend[0-9]
+
 ### Nix ###
 # devenv
 .direnv/
