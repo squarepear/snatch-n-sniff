@@ -1,11 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=19 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Texture2D" uid="uid://dw0do2yfovygb" path="res://icon.svg" id="1_exoxq"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_ue6bc"]
 [ext_resource type="PackedScene" uid="uid://cdtujo6st3ima" path="res://people/people.tscn" id="4_e0jyn"]
+[ext_resource type="Texture2D" uid="uid://c7asba44vt71e" path="res://people/wizard/wizard.png" id="4_hj8hc"]
+[ext_resource type="Script" path="res://sniffable/snatchable.gd" id="4_x66rp"]
 [ext_resource type="PackedScene" uid="uid://cvronse8odauh" path="res://sniffable/pizza/pizza.tscn" id="5_aeask"]
 [ext_resource type="Script" path="res://convention/snatched_alarm.gd" id="5_wqeoe"]
+[ext_resource type="Resource" uid="uid://esxqy0mm4gia" path="res://people/wizard/wizard_sniffdex_entry.tres" id="6_6p8yc"]
 [ext_resource type="PackedScene" uid="uid://b56rso8jsl55m" path="res://sniffable/skunk/skunk.tscn" id="6_gynf0"]
+[ext_resource type="Texture2D" uid="uid://dq1y8whwhrqs" path="res://people/peasant.png" id="6_xg186"]
 [ext_resource type="PackedScene" uid="uid://860f1kn82pfk" path="res://convention/table.blend" id="7_8dcha"]
 [ext_resource type="PackedScene" uid="uid://dm1cpeefjn3n4" path="res://sniffable/orange/orange.tscn" id="8_7w2y6"]
 [ext_resource type="PackedScene" uid="uid://im8p86adbjiy" path="res://sniffable/shoe/shoe.tscn" id="9_jv17k"]
@@ -52,11 +56,18 @@ environment = SubResource("Environment_0aog6")
 [node name="Player" parent="." instance=ExtResource("2_ue6bc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00298357, 0.0071401, 0.941399)
 
-[node name="People" parent="." instance=ExtResource("4_e0jyn")]
+[node name="Wizard" parent="." instance=ExtResource("4_e0jyn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -2)
+sprite_texture = ExtResource("4_hj8hc")
 
-[node name="People2" parent="." instance=ExtResource("4_e0jyn")]
+[node name="Snatchable" type="Node" parent="Wizard" node_paths=PackedStringArray("sprite3d")]
+script = ExtResource("4_x66rp")
+sprite3d = NodePath("../Sprite")
+sniffdex_entry = ExtResource("6_6p8yc")
+
+[node name="Peasant" parent="." instance=ExtResource("4_e0jyn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6)
+sprite_texture = ExtResource("6_xg186")
 
 [node name="SnatchedAlarm" type="Sprite3D" parent="." node_paths=PackedStringArray("target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
@@ -95,3 +106,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.07435, -0.000359148, -0.958
 
 [connection signal="snatched_snatchable" from="Player" to="SnatchedAlarm" method="activate" flags=3 unbinds=1]
 [connection signal="sniffed" from="Player" to="SnatchedAlarm" method="deactivate"]
+
+[editable path="Wizard"]

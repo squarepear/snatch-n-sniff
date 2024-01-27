@@ -1,6 +1,8 @@
 extends CharacterBody3D
 
-
+@export var sprite_texture : CompressedTexture2D:
+	set(value):
+		%Sprite.texture = value
 const SPEED = 1.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
