@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://yebbi0li0we1"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8ai4c"]
+height = 0.954441
+radius = 0.556963
+
+[node name="SniffableBody" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_8ai4c")

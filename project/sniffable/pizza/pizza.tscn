@@ -1,23 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6cb3vsxysnor"]
+[gd_scene load_steps=3 format=3 uid="uid://b6cb3vsxysnor"]
 
 [ext_resource type="Texture2D" uid="uid://vwf8vnyyao84" path="res://sniffable/pizza/pizza.png" id="1_loctg"]
 [ext_resource type="Script" path="res://sniffable/sniffable.gd" id="2_5b4kx"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_tsl14"]
-height = 0.954441
-radius = 0.556963
-
-[node name="Pizza" type="StaticBody3D"]
-
-[node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-pixel_size = 0.005
-billboard = 2
+[node name="Pizza" type="Sprite3D"]
 texture = ExtResource("1_loctg")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-shape = SubResource("CylinderShape3D_tsl14")
-
-[node name="Sniffable" type="Node" parent="."]
 script = ExtResource("2_5b4kx")

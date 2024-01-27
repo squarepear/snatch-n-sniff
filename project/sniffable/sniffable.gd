@@ -1,5 +1,5 @@
 class_name Sniffable
-extends Node
+extends SpriteBody
 
 # Everything snatchable is sniffable
 signal snatched
@@ -12,3 +12,4 @@ func snatch() -> void:
 
 func sniff() -> void:
 	sniffed.emit()
+
