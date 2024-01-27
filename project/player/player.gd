@@ -35,18 +35,21 @@ func _physics_process(delta):
 
 
 func snatch():
-	# COLIDE GET SB
-	snatch_detector.force_shapecast_update()
-	if !snatch_detector.is_colliding():
+	if not snatch_detector.is_colliding():
 		return
-	var sb :Node= snatch_detector.get_collider(0)
-	if sb.get_parent() is Sniffable:
-		sb.get_parent().snatch()
+
+	var body: Node = snatch_detector.get_collider(0)
+	var sniffable := Sniffable.find(body)
+
+	if not sniffable:
+		return
+
+	sniffable.snatch()
 
 
 func _input(event: InputEvent):
 	if event is InputEventMouseMotion:
-		rotate_y(-event.relative.x*0.005)
+		rotate_y(-event.relative.x * 0.005)
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit() #im gamer
 	if event.is_action_pressed("snatch"):

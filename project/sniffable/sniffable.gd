@@ -1,5 +1,5 @@
 class_name Sniffable
-extends SpriteBody
+extends Node
 
 # Everything snatchable is sniffable
 signal snatched
@@ -13,3 +13,10 @@ func snatch() -> void:
 func sniff() -> void:
 	sniffed.emit()
 
+
+static func find(parent: Node) -> Sniffable:
+	for child in parent.get_children():
+		if child is Sniffable:
+			return child
+
+	return null
