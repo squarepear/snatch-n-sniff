@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=4 format=3 uid="uid://dscnb84ukwo4q"]
+[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=5 format=3 uid="uid://dscnb84ukwo4q"]
 
 [ext_resource type="Texture2D" uid="uid://cw56yadm3p30r" path="res://sniffable/evil_penny/Evil_Penny_Hand.png" id="1_1j4iy"]
 [ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_873u1"]
 [ext_resource type="Texture2D" uid="uid://bqvrurbayoy8h" path="res://sniffable/evil_penny/Evil_Penny.png" id="2_d4g5w"]
+[ext_resource type="AudioStream" uid="uid://8dcvalxwinyi" path="res://audio/evil_penny_sniff.wav" id="3_ac4tg"]
 
 [resource]
 script = ExtResource("1_873u1")
@@ -10,3 +11,4 @@ name = "EvilPenny"
 sprite = ExtResource("2_d4g5w")
 hand_sprite = ExtResource("1_1j4iy")
 sniff_time = 0.5
+sniff_noise = ExtResource("3_ac4tg")

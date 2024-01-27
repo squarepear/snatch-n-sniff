@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_78xqy"]
 [ext_resource type="Texture2D" uid="uid://cxkxuefs1ahhf" path="res://sniffable/shoe/Shoe_Hand.png" id="1_urtty"]
 [ext_resource type="Texture2D" uid="uid://ceshmeld7ir47" path="res://sniffable/shoe/Shoe.png" id="2_58xpx"]
-[ext_resource type="AudioStream" uid="uid://dr0rdfqgt0fsu" path="res://audio/shoe_sniff.wav" id="2_70hiw"]
+[ext_resource type="AudioStream" uid="uid://dsf7xofoppsiq" path="res://audio/shoe_sniff.wav" id="2_70hiw"]
 
 [resource]
 script = ExtResource("1_78xqy")
