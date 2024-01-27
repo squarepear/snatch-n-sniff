@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=8 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Texture2D" uid="uid://dw0do2yfovygb" path="res://icon.svg" id="1_exoxq"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_ue6bc"]
 [ext_resource type="PackedScene" uid="uid://b6cb3vsxysnor" path="res://sniffable/pizza/pizza.tscn" id="3_5e1mg"]
+[ext_resource type="PackedScene" uid="uid://cdtujo6st3ima" path="res://people/people.tscn" id="4_e0jyn"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_smecd"]
 size = Vector2(20, 20)
@@ -56,3 +57,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48796, -0.000359237, 4.385
 
 [node name="Pizza5" parent="." instance=ExtResource("3_5e1mg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.84713, -0.000359118, -3.73158)
+
+[node name="People" parent="." instance=ExtResource("4_e0jyn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -2)
+
+[node name="People2" parent="." instance=ExtResource("4_e0jyn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6)
