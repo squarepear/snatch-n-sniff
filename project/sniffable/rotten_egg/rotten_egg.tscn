@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://sws8ip0qxc3x"]
+
+[ext_resource type="PackedScene" uid="uid://b6cb3vsxysnor" path="res://sniffable/snatchable_object.tscn" id="1_36rkv"]
+[ext_resource type="Script" path="res://sniffable/snatchable.gd" id="2_fcyn4"]
+[ext_resource type="Resource" uid="uid://cj4igtguf8vpl" path="res://sniffable/rotten_egg/rotten_egg_sniffdex_entry.tres" id="3_buoo7"]
+
+[node name="RottenEgg" type="Node3D"]
+
+[node name="SnatchableObject" parent="." instance=ExtResource("1_36rkv")]
+
+[node name="Snatchable" type="Node" parent="SnatchableObject" node_paths=PackedStringArray("sprite3d")]
+script = ExtResource("2_fcyn4")
+sprite3d = NodePath("../Sprite3D")
+sniffdex_entry = ExtResource("3_buoo7")
+
+[editable path="SnatchableObject"]

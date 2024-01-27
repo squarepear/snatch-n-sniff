@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://6x5ho8xj1gvm"]
+
+[ext_resource type="PackedScene" uid="uid://b6cb3vsxysnor" path="res://sniffable/snatchable_object.tscn" id="1_m2jgb"]
+[ext_resource type="Script" path="res://sniffable/snatchable.gd" id="2_utayh"]
+[ext_resource type="Resource" uid="uid://bkgy31j6dtp7j" path="res://sniffable/deodorant/deodorant_sniffdex_entry.tres" id="3_1f4y5"]
+
+[node name="Deodorant" type="Node3D"]
+
+[node name="SnatchableObject" parent="." instance=ExtResource("1_m2jgb")]
+
+[node name="Snatchable" type="Node" parent="SnatchableObject" node_paths=PackedStringArray("sprite3d")]
+script = ExtResource("2_utayh")
+sprite3d = NodePath("../Sprite3D")
+sniffdex_entry = ExtResource("3_1f4y5")
+
+[editable path="SnatchableObject"]

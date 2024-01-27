@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=24 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="PackedScene" uid="uid://daqc43oempgnp" path="res://convention/convention_center.tscn" id="1_j4yc8"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_dja8k"]
@@ -16,6 +16,12 @@
 [ext_resource type="PackedScene" uid="uid://im8p86adbjiy" path="res://sniffable/shoe/shoe.tscn" id="13_k3wx2"]
 [ext_resource type="PackedScene" uid="uid://d0lhdmahcw77t" path="res://sniffable/penny/penny.tscn" id="14_3rt0l"]
 [ext_resource type="Texture2D" uid="uid://c7jc2iarcryqn" path="res://people/clown.png" id="15_3cd7s"]
+[ext_resource type="PackedScene" uid="uid://bww8472hoeo5r" path="res://sniffable/bread/bread.tscn" id="17_fy8gt"]
+[ext_resource type="PackedScene" uid="uid://dof8hlw3tknqb" path="res://sniffable/fish/fish.tscn" id="18_1x67r"]
+[ext_resource type="PackedScene" uid="uid://vq560ifaj3ic" path="res://sniffable/evil_penny/evil_penny.tscn" id="19_if7gk"]
+[ext_resource type="PackedScene" uid="uid://6x5ho8xj1gvm" path="res://sniffable/deodorant/deodorant.tscn" id="20_85e3n"]
+[ext_resource type="PackedScene" uid="uid://sws8ip0qxc3x" path="res://sniffable/rotten_egg/rotten_egg.tscn" id="21_usbll"]
+[ext_resource type="PackedScene" uid="uid://e5clwnu35xek" path="res://sniffable/brass_horn/brass_horn.tscn" id="22_gus5u"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qw0s4"]
 size = Vector2(128, 128)
@@ -82,6 +88,39 @@ sprite_texture = ExtResource("8_cticb")
 [node name="Clown" parent="." instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.181, -0.0451487, -19.2528)
 sprite_texture = ExtResource("15_3cd7s")
+
+[node name="Bread" parent="." instance=ExtResource("17_fy8gt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.6864, 0, -19.5708)
+
+[node name="Fish" parent="." instance=ExtResource("18_1x67r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.0651, 4.76837e-07, -13.4798)
+
+[node name="Fish2" parent="." instance=ExtResource("18_1x67r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.20551, 0, -28.9228)
+
+[node name="EvilPenny" parent="." instance=ExtResource("19_if7gk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4799, 0, 5.89134)
+
+[node name="Penny2" parent="." instance=ExtResource("14_3rt0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4097, 0, -14.516)
+
+[node name="EvilPenny2" parent="." instance=ExtResource("19_if7gk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49629, 0, 4.01855)
+
+[node name="Deodorant" parent="." instance=ExtResource("20_85e3n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8085, 0, -4.49184)
+
+[node name="RottenEgg" parent="." instance=ExtResource("21_usbll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29025, 0, -26.926)
+
+[node name="BrassHorn" parent="." instance=ExtResource("22_gus5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.183, 0, -16.8539)
+
+[node name="BrassHorn2" parent="." instance=ExtResource("22_gus5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1582, 0, -6.77778)
+
+[node name="BrassHorn3" parent="." instance=ExtResource("22_gus5u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3116, -4.76837e-07, 4.88729)
 
 [connection signal="snatched_snatchable" from="Player" to="SnatchedAlarm" method="activate" flags=3 unbinds=1]
 [connection signal="sniffed" from="Player" to="SnatchedAlarm" method="deactivate"]

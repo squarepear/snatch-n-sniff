@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=5 format=3 uid="uid://b7hwu3oardupx"]
+
+[ext_resource type="Texture2D" uid="uid://ut4rly7h367g" path="res://sniffable/brass_horn/Brass_Horn_Hand.png" id="1_h0nb1"]
+[ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="2_mbtjo"]
+[ext_resource type="AudioStream" uid="uid://bu5e2styjoe6d" path="res://audio/brass_horn_sniff.wav" id="3_vvjcc"]
+[ext_resource type="Texture2D" uid="uid://dxdjm6u56o0kl" path="res://sniffable/brass_horn/Brass_Horn.png" id="4_rjs4u"]
+
+[resource]
+script = ExtResource("2_mbtjo")
+name = "BrassHorn"
+sprite = ExtResource("4_rjs4u")
+hand_sprite = ExtResource("1_h0nb1")
+sniff_time = 3.0
+sniff_noise = ExtResource("3_vvjcc")

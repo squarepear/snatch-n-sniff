@@ -8,9 +8,9 @@
 
 [node name="SnatchableObject" parent="." instance=ExtResource("1_2oey8")]
 
-[node name="Snatchable" type="Node" parent="." node_paths=PackedStringArray("sprite3d")]
+[node name="Snatchable" type="Node" parent="SnatchableObject" node_paths=PackedStringArray("sprite3d")]
 script = ExtResource("2_2iqdn")
-sprite3d = NodePath("../SnatchableObject/Sprite3D")
+sprite3d = NodePath("../Sprite3D")
 sniffdex_entry = ExtResource("3_v3s0r")
 
 [editable path="SnatchableObject"]

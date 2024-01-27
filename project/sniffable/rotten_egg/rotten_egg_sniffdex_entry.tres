@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=5 format=3 uid="uid://cj4igtguf8vpl"]
+
+[ext_resource type="Texture2D" uid="uid://8cjab550xd3u" path="res://sniffable/rotten_egg/Rotting_Egg_Hand.png" id="1_lp10d"]
+[ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="2_ano3m"]
+[ext_resource type="AudioStream" uid="uid://cqi3f0132uwi6" path="res://audio/rotten_egg_sniff.wav" id="3_tgawt"]
+[ext_resource type="Texture2D" uid="uid://cpvr537jaa2pg" path="res://sniffable/rotten_egg/Rotting_Egg.png" id="4_uk748"]
+
+[resource]
+script = ExtResource("2_ano3m")
+name = "RottenEgg"
+sprite = ExtResource("4_uk748")
+hand_sprite = ExtResource("1_lp10d")
+sniff_time = 2.0
+sniff_noise = ExtResource("3_tgawt")

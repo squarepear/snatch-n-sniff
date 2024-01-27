@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://e5clwnu35xek"]
+
+[ext_resource type="PackedScene" uid="uid://b6cb3vsxysnor" path="res://sniffable/snatchable_object.tscn" id="1_twryl"]
+[ext_resource type="Script" path="res://sniffable/snatchable.gd" id="2_osxau"]
+[ext_resource type="Resource" uid="uid://b7hwu3oardupx" path="res://sniffable/brass_horn/brass_horn_sniffdex_entry.tres" id="3_4rvu2"]
+
+[node name="BrassHorn" type="Node3D"]
+
+[node name="SnatchableObject" parent="." instance=ExtResource("1_twryl")]
+
+[node name="Snatchable" type="Node" parent="SnatchableObject" node_paths=PackedStringArray("sprite3d")]
+script = ExtResource("2_osxau")
+sprite3d = NodePath("../Sprite3D")
+sniffdex_entry = ExtResource("3_4rvu2")
+
+[editable path="SnatchableObject"]
