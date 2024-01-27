@@ -1,8 +1,12 @@
 extends Node2D
 
 
+func _ready():
+	$AnimationPlayer.play("title_sequence")
+
+
 func _on_convention_button_pressed():
-	get_tree().change_scene_to_file("res://convention/convention.tscn")
+	get_tree().change_scene_to_file("res://game/game.tscn")
 
 
 func _on_exit_button_pressed():
