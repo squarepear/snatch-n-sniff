@@ -17,6 +17,7 @@ background_color = Color(1, 0.541176, 0.639216, 1)
 [node name="Convention" type="Node3D"]
 
 [node name="Floor" type="StaticBody3D" parent="."]
+collision_mask = 0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
 mesh = SubResource("PlaneMesh_smecd")
@@ -43,3 +44,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00298357, 0.0071401, 0.941
 
 [node name="Pizza" parent="." instance=ExtResource("3_5e1mg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+
+[node name="Pizza2" parent="." instance=ExtResource("3_5e1mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25607, -0.000359118, 1.54183)
+
+[node name="Pizza3" parent="." instance=ExtResource("3_5e1mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46349, -0.000359118, 2.73172)
+
+[node name="Pizza4" parent="." instance=ExtResource("3_5e1mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48796, -0.000359237, 4.38577)
+
+[node name="Pizza5" parent="." instance=ExtResource("3_5e1mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.84713, -0.000359118, -3.73158)

@@ -5,6 +5,8 @@ height = 0.954441
 radius = 0.556963
 
 [node name="SniffableBody" type="StaticBody3D"]
+collision_layer = 4
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CylinderShape3D_8ai4c")
