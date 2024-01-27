@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Godot Template"
-run/main_scene="res://convention/convention.tscn"
+run/main_scene="res://game/game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
