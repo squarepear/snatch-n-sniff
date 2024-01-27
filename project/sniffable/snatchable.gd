@@ -1,22 +1,17 @@
-class_name Sniffable
+class_name Snatchable
 extends Node
 
 # Everything snatchable is sniffable
 signal snatched
-signal sniffed
 
 
 func snatch() -> void:
 	snatched.emit()
 
 
-func sniff() -> void:
-	sniffed.emit()
-
-
-static func find(parent: Node) -> Sniffable:
+static func find(parent: Node) -> Snatchable:
 	for child in parent.get_children():
-		if child is Sniffable:
+		if child is Snatchable:
 			return child
 
 	return null

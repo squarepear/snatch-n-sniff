@@ -1,6 +1,8 @@
 extends CharacterBody3D
 
 
+signal snatched_snatchable(snatchable: Snatchable)
+
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
@@ -39,12 +41,12 @@ func snatch():
 		return
 
 	var body: Node = snatch_detector.get_collider(0)
-	var sniffable := Sniffable.find(body)
+	var snatchable := Snatchable.find(body)
 
-	if not sniffable:
+	if not snatchable:
 		return
 
-	sniffable.snatch()
+	snatched_snatchable.emit(snatchable)
 
 
 func _input(event: InputEvent):

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b6cb3vsxysnor"]
 
 [ext_resource type="Texture2D" uid="uid://vwf8vnyyao84" path="res://sniffable/pizza/pizza.png" id="1_loctg"]
-[ext_resource type="Script" path="res://sniffable/sniffable.gd" id="2_5b4kx"]
+[ext_resource type="Script" path="res://sniffable/snatchable.gd" id="2_336o7"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_wxkbq"]
 height = 0.64
@@ -21,7 +21,7 @@ pixel_size = 0.0025
 billboard = 2
 texture = ExtResource("1_loctg")
 
-[node name="Sniffable" type="Node" parent="."]
-script = ExtResource("2_5b4kx")
+[node name="Snatchable" type="Node" parent="."]
+script = ExtResource("2_336o7")
 
-[connection signal="snatched" from="Sniffable" to="." method="queue_free"]
+[connection signal="snatched" from="Snatchable" to="." method="queue_free"]
