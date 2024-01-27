@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://860f1kn82pfk"
-path="res://.godot/imported/table.blend-99e39b3d4de153b69356193beb59926c.scn"
+path="res://.godot/imported/table.blend-7a62ebb126e6435b4473c711853417c8.scn"
 
 [deps]
 
-source_file="res://convention/table.blend"
-dest_files=["res://.godot/imported/table.blend-99e39b3d4de153b69356193beb59926c.scn"]
+source_file="res://convention/table/table.blend"
+dest_files=["res://.godot/imported/table.blend-7a62ebb126e6435b4473c711853417c8.scn"]
 
 [params]
 
@@ -29,7 +29,14 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"Material": {
+"use_external/enabled": true,
+"use_external/path": "res://convention/table/table_material.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
 blender/nodes/visible=0

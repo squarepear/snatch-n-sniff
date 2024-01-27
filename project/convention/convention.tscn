@@ -10,7 +10,7 @@
 [ext_resource type="Resource" uid="uid://esxqy0mm4gia" path="res://people/wizard/wizard_sniffdex_entry.tres" id="6_6p8yc"]
 [ext_resource type="PackedScene" uid="uid://b56rso8jsl55m" path="res://sniffable/skunk/skunk.tscn" id="6_gynf0"]
 [ext_resource type="Texture2D" uid="uid://dq1y8whwhrqs" path="res://people/peasant.png" id="6_xg186"]
-[ext_resource type="PackedScene" uid="uid://860f1kn82pfk" path="res://convention/table.blend" id="7_8dcha"]
+[ext_resource type="PackedScene" uid="uid://860f1kn82pfk" path="res://convention/table/table.blend" id="7_8dcha"]
 [ext_resource type="PackedScene" uid="uid://dm1cpeefjn3n4" path="res://sniffable/orange/orange.tscn" id="8_7w2y6"]
 [ext_resource type="PackedScene" uid="uid://im8p86adbjiy" path="res://sniffable/shoe/shoe.tscn" id="9_jv17k"]
 [ext_resource type="PackedScene" uid="uid://d0lhdmahcw77t" path="res://sniffable/penny/penny.tscn" id="10_ytjy3"]
@@ -76,7 +76,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
 [node name="Skunk2" parent="." instance=ExtResource("6_gynf0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.66575, 1.20646, -5.97043)
 
-[node name="table" parent="." instance=ExtResource("7_8dcha")]
+[node name="Table" parent="." instance=ExtResource("7_8dcha")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7435, -0.000358909, -5.90254)
 
 [node name="Orange" parent="." instance=ExtResource("8_7w2y6")]
