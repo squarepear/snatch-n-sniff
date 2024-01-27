@@ -12,11 +12,19 @@ var is_sniffing := false
 var has_sniffed := false
 
 @onready var hand_texture := texture
+@onready var start_position := position.x
 @onready var sniff_timer := %SniffTimer
 
 
 func _ready() -> void:
 	sniff_timer.timeout.connect(sniff_complete)
+
+
+func _process(delta):
+	if has_sniffed:
+		_shake(8.0, delta)
+	elif is_sniffing:
+		_shake(1.0, delta)
 
 
 func snatch(snatchable: Snatchable) -> void:
@@ -52,6 +60,7 @@ func stop_sniffing() -> void:
 
 	is_sniffing = false
 	stopped_sniffing.emit()
+	_reset_position()
 
 	if not has_sniffed:
 		sniff_timer.stop()
@@ -59,6 +68,7 @@ func stop_sniffing() -> void:
 
 	sniff(held_item)
 	completed_sniffing.emit()
+	has_sniffed = false
 
 
 func sniff(sniffdex_entry: SniffdexEntry) -> void:
@@ -67,6 +77,14 @@ func sniff(sniffdex_entry: SniffdexEntry) -> void:
 
 	texture = hand_texture
 	held_item = null
+
+
+func _shake(amount: float, delta: float) -> void:
+	position.x += (randf() * 2.0 - 1.0) * amount * delta * 60.0
+
+
+func _reset_position() -> void:
+	position.x = start_position
 
 
 func _input(event: InputEvent):
