@@ -1,12 +1,14 @@
-[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=4 format=3 uid="uid://bkgy31j6dtp7j"]
+[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=5 format=3 uid="uid://bkgy31j6dtp7j"]
 
-[ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_1e427"]
-[ext_resource type="AudioStream" uid="uid://bdwy118xkptpd" path="res://audio/deodorant_sniff.wav" id="2_s5hy1"]
-[ext_resource type="Texture2D" uid="uid://coaj0dcchsgi5" path="res://sniffable/deodorant/Deodorant.png" id="3_ceq16"]
+[ext_resource type="Texture2D" uid="uid://d1m7u7jqy6cgt" path="res://sniffable/deodorant/Deodorant_Hand.png" id="1_qs5ra"]
+[ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="2_5o10w"]
+[ext_resource type="AudioStream" uid="uid://bdwy118xkptpd" path="res://audio/deodorant_sniff.wav" id="3_yfed1"]
+[ext_resource type="Texture2D" uid="uid://coaj0dcchsgi5" path="res://sniffable/deodorant/Deodorant.png" id="4_2jacm"]
 
 [resource]
-script = ExtResource("1_1e427")
+script = ExtResource("2_5o10w")
 name = "Deodorant"
-sprite = ExtResource("3_ceq16")
-sniff_time = 2.0
-sniff_noise = ExtResource("2_s5hy1")
+sprite = ExtResource("4_2jacm")
+hand_sprite = ExtResource("1_qs5ra")
+sniff_time = 3.0
+sniff_noise = ExtResource("3_yfed1")
