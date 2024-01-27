@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://daqc43oempgnp"]
+
+[ext_resource type="PackedScene" uid="uid://hki42ukt5d36" path="res://convention/convention_center.blend" id="1_qh047"]
+
+[sub_resource type="Environment" id="Environment_hswp2"]
+background_mode = 1
+background_color = Color(1, 0.541176, 0.639216, 1)
+
+[node name="ConventionCenter" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.36777, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_hswp2")
+
+[node name="ConventionCenter" parent="." instance=ExtResource("1_qh047")]

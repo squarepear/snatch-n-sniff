@@ -2,7 +2,15 @@
 
 importer="wav"
 type="AudioStreamWAV"
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 uid="uid://b6sth84w688aa"
+=======
+uid="uid://ost8nt0g8f12"
+>>>>>>> Stashed changes
+=======
+uid="uid://ost8nt0g8f12"
+>>>>>>> Stashed changes
 path="res://.godot/imported/brass_horn_sniff.wav-6b571eb8e65eb7dfb72ebb2249bf2e30.sample"
 
 [deps]
