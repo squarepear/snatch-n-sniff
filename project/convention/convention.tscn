@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=18 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Texture2D" uid="uid://dw0do2yfovygb" path="res://icon.svg" id="1_exoxq"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_ue6bc"]
@@ -14,12 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dm1cpeefjn3n4" path="res://sniffable/orange/orange.tscn" id="8_7w2y6"]
 [ext_resource type="PackedScene" uid="uid://im8p86adbjiy" path="res://sniffable/shoe/shoe.tscn" id="9_jv17k"]
 [ext_resource type="PackedScene" uid="uid://d0lhdmahcw77t" path="res://sniffable/penny/penny.tscn" id="10_ytjy3"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_smecd"]
-size = Vector2(20, 20)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_f23cw"]
-size = Vector3(20, 0.1, 20)
+[ext_resource type="PackedScene" uid="uid://hki42ukt5d36" path="res://convention/convention_center.blend" id="11_c3qii"]
 
 [sub_resource type="Environment" id="Environment_0aog6"]
 background_mode = 1
@@ -29,17 +24,6 @@ background_color = Color(1, 0.541176, 0.639216, 1)
 size = Vector2(128, 128)
 
 [node name="Convention" type="Node3D"]
-
-[node name="Floor" type="StaticBody3D" parent="."]
-collision_mask = 0
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
-mesh = SubResource("PlaneMesh_smecd")
-skeleton = NodePath("../..")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0503591, 0)
-shape = SubResource("BoxShape3D_f23cw")
 
 [node name="Guy" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.330011, 0)
@@ -70,7 +54,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6)
 sprite_texture = ExtResource("6_xg186")
 
 [node name="SnatchedAlarm" type="Sprite3D" parent="." node_paths=PackedStringArray("target")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.8, 0)
 pixel_size = 0.0025
 billboard = 2
 texture = SubResource("PlaceholderTexture2D_qw0s4")
@@ -103,6 +87,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.20377, -0.000359148, 2.045
 
 [node name="Penny" parent="." instance=ExtResource("10_ytjy3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.07435, -0.000359148, -0.958267)
+
+[node name="ConventionCenter" parent="." instance=ExtResource("11_c3qii")]
 
 [connection signal="snatched_snatchable" from="Player" to="SnatchedAlarm" method="activate" flags=3 unbinds=1]
 [connection signal="sniffed" from="Player" to="SnatchedAlarm" method="deactivate"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://b6cb3vsxysnor"]
 
-[ext_resource type="Texture2D" uid="uid://vwf8vnyyao84" path="res://sniffable/pizza/pizza.png" id="1_1tfq0"]
+[ext_resource type="Texture2D" uid="uid://dnv5v4wruedi0" path="res://sniffable/Missing_Sniffable.png" id="1_xyhbr"]
 [ext_resource type="Shader" path="res://sniffable/snatchable.gdshader" id="5_vufki"]
 [ext_resource type="Shader" path="res://sniffable/snatchable_center.gdshader" id="6_rjen3"]
 
@@ -39,7 +39,7 @@ shape = SubResource("CylinderShape3D_wxkbq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32, 0)
 pixel_size = 0.0025
 billboard = 2
-texture = ExtResource("1_1tfq0")
+texture = ExtResource("1_xyhbr")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32, 0)
