@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=3 format=3 uid="uid://we6gdjjh0qe5"]
+
+[ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_8q1gw"]
+[ext_resource type="Texture2D" uid="uid://b8i7qc6moowmc" path="res://sniffable/orange/Orange.png" id="2_q4u1e"]
+
+[resource]
+script = ExtResource("1_8q1gw")
+name = "Orange"
+sprite = ExtResource("2_q4u1e")
+sniff_time = 2.0

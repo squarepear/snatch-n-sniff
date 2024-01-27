@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://im8p86adbjiy"]
+
+[ext_resource type="PackedScene" uid="uid://b6cb3vsxysnor" path="res://sniffable/snatchable_object.tscn" id="1_j7q3n"]
+[ext_resource type="Script" path="res://sniffable/snatchable.gd" id="2_brfah"]
+[ext_resource type="Resource" uid="uid://cgc8ok3jsgslu" path="res://sniffable/shoe/shoe_sniffdex_entry.tres" id="3_ob6fj"]
+
+[node name="Shoe" type="Node3D"]
+
+[node name="SnatchableObject" parent="." instance=ExtResource("1_j7q3n")]
+
+[node name="Snatchable" type="Node" parent="SnatchableObject" node_paths=PackedStringArray("sprite3d")]
+script = ExtResource("2_brfah")
+sprite3d = NodePath("../Sprite3D")
+sniffdex_entry = ExtResource("3_ob6fj")
+
+[editable path="SnatchableObject"]

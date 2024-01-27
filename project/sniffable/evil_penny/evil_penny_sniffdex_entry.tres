@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=3 format=3 uid="uid://dscnb84ukwo4q"]
+
+[ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_873u1"]
+[ext_resource type="Texture2D" uid="uid://bqvrurbayoy8h" path="res://sniffable/evil_penny/Evil_Penny.png" id="2_d4g5w"]
+
+[resource]
+script = ExtResource("1_873u1")
+name = "EvilPenny"
+sprite = ExtResource("2_d4g5w")
+sniff_time = 0.5

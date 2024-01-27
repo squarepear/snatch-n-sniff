@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://vq560ifaj3ic"]
+
+[ext_resource type="PackedScene" uid="uid://b6cb3vsxysnor" path="res://sniffable/snatchable_object.tscn" id="1_2oey8"]
+[ext_resource type="Script" path="res://sniffable/snatchable.gd" id="2_2iqdn"]
+[ext_resource type="Resource" uid="uid://dscnb84ukwo4q" path="res://sniffable/evil_penny/evil_penny_sniffdex_entry.tres" id="3_v3s0r"]
+
+[node name="EvilPenny" type="Node3D"]
+
+[node name="SnatchableObject" parent="." instance=ExtResource("1_2oey8")]
+
+[node name="Snatchable" type="Node" parent="." node_paths=PackedStringArray("sprite3d")]
+script = ExtResource("2_2iqdn")
+sprite3d = NodePath("../SnatchableObject/Sprite3D")
+sniffdex_entry = ExtResource("3_v3s0r")
+
+[editable path="SnatchableObject"]

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=3 format=3 uid="uid://cxnhxpu1mwxc8"]
+
+[ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_3lkil"]
+[ext_resource type="Texture2D" uid="uid://cgpdyt7sop3ma" path="res://sniffable/garlic/Garlick.png" id="2_85j8f"]
+
+[resource]
+script = ExtResource("1_3lkil")
+name = "Garlic"
+sprite = ExtResource("2_85j8f")
+sniff_time = 2.0
