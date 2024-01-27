@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=11 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Texture2D" uid="uid://dw0do2yfovygb" path="res://icon.svg" id="1_exoxq"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_ue6bc"]
-[ext_resource type="PackedScene" uid="uid://b6cb3vsxysnor" path="res://sniffable/snatchable_object.tscn" id="3_5e1mg"]
 [ext_resource type="PackedScene" uid="uid://cdtujo6st3ima" path="res://people/people.tscn" id="4_e0jyn"]
+[ext_resource type="PackedScene" uid="uid://cvronse8odauh" path="res://sniffable/pizza/pizza.tscn" id="5_aeask"]
 [ext_resource type="Script" path="res://convention/snatched_alarm.gd" id="5_wqeoe"]
+[ext_resource type="PackedScene" uid="uid://b56rso8jsl55m" path="res://sniffable/skunk/skunk.tscn" id="6_gynf0"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_smecd"]
 size = Vector2(20, 20)
@@ -47,21 +48,6 @@ environment = SubResource("Environment_0aog6")
 [node name="Player" parent="." instance=ExtResource("2_ue6bc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00298357, 0.0071401, 0.941399)
 
-[node name="Pizza" parent="." instance=ExtResource("3_5e1mg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
-
-[node name="Pizza2" parent="." instance=ExtResource("3_5e1mg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25607, -0.000359118, 1.54183)
-
-[node name="Pizza3" parent="." instance=ExtResource("3_5e1mg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46349, -0.000359118, 2.73172)
-
-[node name="Pizza4" parent="." instance=ExtResource("3_5e1mg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48796, -0.000359237, 4.38577)
-
-[node name="Skunk" parent="." instance=ExtResource("3_5e1mg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.84713, -0.000359118, -3.73158)
-
 [node name="People" parent="." instance=ExtResource("4_e0jyn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -2)
 
@@ -75,6 +61,21 @@ billboard = 2
 texture = SubResource("PlaceholderTexture2D_qw0s4")
 script = ExtResource("5_wqeoe")
 target = NodePath("../Player")
+
+[node name="Pizza" parent="." instance=ExtResource("5_aeask")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.56777, -0.000359148, -1.63733)
+
+[node name="Pizza2" parent="." instance=ExtResource("5_aeask")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.54107, -0.000359148, -6.05253)
+
+[node name="Pizza3" parent="." instance=ExtResource("5_aeask")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35314, -0.000359148, 8.27506)
+
+[node name="Skunk" parent="." instance=ExtResource("6_gynf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+
+[node name="Skunk2" parent="." instance=ExtResource("6_gynf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 4)
 
 [connection signal="snatched_snatchable" from="Player" to="SnatchedAlarm" method="activate" flags=3 unbinds=1]
 [connection signal="sniffed" from="Player" to="SnatchedAlarm" method="deactivate"]

@@ -1,8 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6cb3vsxysnor"]
+[gd_scene load_steps=10 format=3 uid="uid://b6cb3vsxysnor"]
 
 [ext_resource type="Texture2D" uid="uid://vwf8vnyyao84" path="res://sniffable/pizza/pizza.png" id="1_1tfq0"]
-[ext_resource type="Resource" uid="uid://ckuvaffltylhh" path="res://sniffable/skunk/skunk_sniffdex_entry.tres" id="2_88dcq"]
-[ext_resource type="Script" path="res://sniffable/snatchable.gd" id="2_336o7"]
 [ext_resource type="Shader" path="res://sniffable/snatchable.gdshader" id="5_vufki"]
 [ext_resource type="Shader" path="res://sniffable/snatchable_center.gdshader" id="6_rjen3"]
 
@@ -42,12 +40,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32, 0)
 pixel_size = 0.0025
 billboard = 2
 texture = ExtResource("1_1tfq0")
-
-[node name="Snatchable" type="Node" parent="." node_paths=PackedStringArray("sprite3d")]
-unique_name_in_owner = true
-script = ExtResource("2_336o7")
-sprite3d = NodePath("../Sprite3D")
-sniffdex_entry = ExtResource("2_88dcq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32, 0)

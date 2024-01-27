@@ -14,6 +14,7 @@ var has_sniffed := false
 @onready var hand_texture := texture
 @onready var start_position := position.x
 @onready var sniff_timer := %SniffTimer
+@onready var sniff_noises := %SniffNoises
 
 
 func _ready() -> void:
@@ -44,6 +45,8 @@ func start_sniffing() -> void:
 	started_sniffing.emit()
 	sniff_timer.start(held_item.sniff_time)
 	is_sniffing = true
+	sniff_noises.stream = held_item.sniff_noise
+	sniff_noises.play()
 
 
 func sniff_complete() -> void:

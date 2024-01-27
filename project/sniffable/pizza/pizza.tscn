@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvronse8odauh"]
+
+[ext_resource type="PackedScene" uid="uid://b6cb3vsxysnor" path="res://sniffable/snatchable_object.tscn" id="1_n82ij"]
+[ext_resource type="Script" path="res://sniffable/snatchable.gd" id="2_qto66"]
+[ext_resource type="Resource" uid="uid://dx75m468vxnhw" path="res://sniffable/pizza/pizza_sniffdex_entry.tres" id="3_v4yq3"]
+
+[node name="Pizza" type="Node3D"]
+
+[node name="SnatchableObject" parent="." instance=ExtResource("1_n82ij")]
+
+[node name="Snatchable" type="Node" parent="SnatchableObject" node_paths=PackedStringArray("sprite3d")]
+script = ExtResource("2_qto66")
+sprite3d = NodePath("../Sprite3D")
+sniffdex_entry = ExtResource("3_v4yq3")
+
+[editable path="SnatchableObject"]

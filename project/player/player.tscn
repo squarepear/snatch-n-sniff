@@ -40,6 +40,9 @@ script = ExtResource("2_ula0b")
 [node name="SniffTimer" type="Timer" parent="Hands"]
 unique_name_in_owner = true
 
+[node name="SniffNoises" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
 [connection signal="snatched_snatchable" from="." to="Hands" method="snatch"]
 [connection signal="completed_sniffing" from="Hands" to="." method="emit_sniffed"]
 [connection signal="started_sniffing" from="Hands" to="." method="slow_down"]
