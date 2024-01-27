@@ -64,9 +64,11 @@ func stop_sniffing() -> void:
 	is_sniffing = false
 	stopped_sniffing.emit()
 	_reset_position()
+	
 
 	if not has_sniffed:
 		sniff_timer.stop()
+		sniff_noises.stop()
 		return
 
 	sniff(held_item)
