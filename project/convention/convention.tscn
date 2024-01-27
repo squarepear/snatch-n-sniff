@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=10 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Texture2D" uid="uid://dw0do2yfovygb" path="res://icon.svg" id="1_exoxq"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_ue6bc"]
 [ext_resource type="PackedScene" uid="uid://b6cb3vsxysnor" path="res://sniffable/pizza/pizza.tscn" id="3_5e1mg"]
 [ext_resource type="PackedScene" uid="uid://cdtujo6st3ima" path="res://people/people.tscn" id="4_e0jyn"]
+[ext_resource type="Script" path="res://convention/snatched_alarm.gd" id="5_wqeoe"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_smecd"]
 size = Vector2(20, 20)
@@ -14,6 +15,9 @@ size = Vector3(20, 0.1, 20)
 [sub_resource type="Environment" id="Environment_0aog6"]
 background_mode = 1
 background_color = Color(1, 0.541176, 0.639216, 1)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qw0s4"]
+size = Vector2(128, 128)
 
 [node name="Convention" type="Node3D"]
 
@@ -63,3 +67,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -2)
 
 [node name="People2" parent="." instance=ExtResource("4_e0jyn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6)
+
+[node name="SnatchedAlarm" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+pixel_size = 0.0025
+billboard = 2
+texture = SubResource("PlaceholderTexture2D_qw0s4")
+script = ExtResource("5_wqeoe")
+
+[connection signal="snatched_snatchable" from="Player" to="SnatchedAlarm" method="activate" unbinds=1]
+[connection signal="sniffed" from="Player" to="SnatchedAlarm" method="deactivate"]

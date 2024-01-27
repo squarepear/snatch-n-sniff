@@ -3,8 +3,9 @@ extends TextureRect
 
 
 signal started_sniffing
-signal sniffing_ready
+signal fully_sniffed
 signal stopped_sniffing
+signal completed_sniffing
 
 var held_item: SniffdexEntry
 var is_sniffing := false
@@ -42,7 +43,7 @@ func sniff_complete() -> void:
 		return
 
 	has_sniffed = true
-	sniffing_ready.emit()
+	fully_sniffed.emit()
 
 
 func stop_sniffing() -> void:
@@ -57,6 +58,7 @@ func stop_sniffing() -> void:
 		return
 
 	sniff(held_item)
+	completed_sniffing.emit()
 
 
 func sniff(sniffdex_entry: SniffdexEntry) -> void:

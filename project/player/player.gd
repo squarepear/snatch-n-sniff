@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 
 signal snatched_snatchable(snatchable: Snatchable)
+signal sniffed
 
 const SPEED := 5.0
 const SNIFF_SPEED_MULTIPLIER := 0.25
@@ -53,6 +54,10 @@ func snatch():
 		return
 
 	snatched_snatchable.emit(snatchable)
+
+
+func emit_sniffed() -> void:
+	sniffed.emit()
 
 
 func slow_down() -> void:
