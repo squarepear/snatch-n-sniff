@@ -8,7 +8,7 @@
 height = 0.64
 radius = 0.32
 
-[node name="Pizza" type="StaticBody3D"]
+[node name="SnatchableObject" type="StaticBody3D"]
 collision_layer = 4
 collision_mask = 0
 
@@ -26,5 +26,3 @@ texture = ExtResource("1_1tfq0")
 script = ExtResource("2_336o7")
 sniffdex_entry = ExtResource("2_rlt2u")
 sprite3d = NodePath("../Sprite3D")
-
-[connection signal="snatched" from="Snatchable" to="." method="queue_free"]

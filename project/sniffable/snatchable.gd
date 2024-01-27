@@ -14,6 +14,8 @@ func _ready():
 
 func snatch() -> void:
 	snatched.emit()
+	
+	get_parent().queue_free()
 
 
 static func find(parent: Node) -> Snatchable:

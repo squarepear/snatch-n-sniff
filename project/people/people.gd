@@ -31,23 +31,20 @@ func _physics_process(delta):
 	velocity.z = direction.z * SPEED
 
 	move_and_slide()
-	
-	_detect_target()
+
+	if chase_target:
+		_detect_target()
 
 
 func _detect_target() -> void:
 	if not snatchback_detector.is_colliding():
 		return
 
-	print("COLLIDE")
-
 	var body: Node = snatchback_detector.get_collider(0)
 	var hands := Hands.find(body)
 
 	if not hands:
 		return
-
-	print("HANDS")
 
 	hands.drop()
 
