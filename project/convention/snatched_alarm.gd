@@ -2,12 +2,14 @@ class_name SnatchedAlarm
 extends Sprite3D
 
 
-signal activated
+signal activated(target: Node3D)
 signal deactivated
 
 const ROTATION_SPEED := 8.0
 
 var active := false
+
+@export var target: Node3D
 
 
 func _process(delta):
@@ -20,7 +22,7 @@ func _process(delta):
 func activate() -> void:
 	active = true
 	billboard = BaseMaterial3D.BILLBOARD_DISABLED
-	activated.emit()
+	activated.emit(target)
 
 
 func deactivate() -> void:
