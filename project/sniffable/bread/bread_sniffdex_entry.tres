@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_7qdgx"]
 [ext_resource type="Texture2D" uid="uid://de0arx41awch3" path="res://sniffable/bread/Bread.png" id="2_8yegu"]
-[ext_resource type="AudioStream" uid="uid://w2r2t8yl2tge" path="res://audio/bread_sniff.wav" id="2_hw4gb"]
+[ext_resource type="AudioStream" uid="uid://j5mqi8ni68oj" path="res://audio/bread_sniff.wav" id="2_hw4gb"]
 
 [resource]
 script = ExtResource("1_7qdgx")
