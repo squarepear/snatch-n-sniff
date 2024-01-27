@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=27 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="PackedScene" uid="uid://daqc43oempgnp" path="res://convention/convention_center.tscn" id="1_j4yc8"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_dja8k"]
@@ -22,6 +22,9 @@
 [ext_resource type="PackedScene" uid="uid://6x5ho8xj1gvm" path="res://sniffable/deodorant/deodorant.tscn" id="20_85e3n"]
 [ext_resource type="PackedScene" uid="uid://sws8ip0qxc3x" path="res://sniffable/rotten_egg/rotten_egg.tscn" id="21_usbll"]
 [ext_resource type="PackedScene" uid="uid://e5clwnu35xek" path="res://sniffable/brass_horn/brass_horn.tscn" id="22_gus5u"]
+[ext_resource type="Texture2D" uid="uid://cet8jhwfj7ipi" path="res://people/Mean_Guy.png" id="23_0df2b"]
+[ext_resource type="Texture2D" uid="uid://7ydwxtnbmijv" path="res://people/Normal_Guy.png" id="24_o6gwv"]
+[ext_resource type="Texture2D" uid="uid://ci8d2rgod6sl0" path="res://people/Gray.png" id="25_thlme"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qw0s4"]
 size = Vector2(128, 128)
@@ -121,6 +124,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1582, 0, -6.77778)
 
 [node name="BrassHorn3" parent="." instance=ExtResource("22_gus5u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3116, -4.76837e-07, 4.88729)
+
+[node name="Mean" parent="." instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4389, -0.053484, 7.11517)
+sprite_texture = ExtResource("23_0df2b")
+
+[node name="Snakes" parent="." instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00101, -0.053484, -23.7062)
+sprite_texture = ExtResource("24_o6gwv")
+
+[node name="Cool" parent="." instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8571, -0.053484, 16.6424)
+sprite_texture = ExtResource("25_thlme")
 
 [connection signal="snatched_snatchable" from="Player" to="SnatchedAlarm" method="activate" flags=3 unbinds=1]
 [connection signal="sniffed" from="Player" to="SnatchedAlarm" method="deactivate"]
