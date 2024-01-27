@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=4 format=3 uid="uid://ckuvaffltylhh"]
+[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=5 format=3 uid="uid://ckuvaffltylhh"]
 
 [ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_f1jli"]
 [ext_resource type="Texture2D" uid="uid://3mcfliylou8q" path="res://sniffable/skunk/skunk_hands.png" id="1_jyy6w"]
 [ext_resource type="Texture2D" uid="uid://ce8fijxrj1ilo" path="res://sniffable/skunk/skunk.png" id="3_gyhc1"]
+[ext_resource type="AudioStream" uid="uid://d2yrpd2cottq0" path="res://sniffable/skunk/skunk_sniff.wav" id="3_h6bqc"]
 
 [resource]
 script = ExtResource("1_f1jli")
@@ -10,3 +11,4 @@ name = "Skunk"
 sprite = ExtResource("3_gyhc1")
 hand_sprite = ExtResource("1_jyy6w")
 sniff_time = 1.0
+sniff_noise = ExtResource("3_h6bqc")
