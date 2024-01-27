@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cfmwvldqikic0"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_kw388"]
-[ext_resource type="Texture2D" uid="uid://bquw005x7dacc" path="res://IMG_4957.png" id="2_c2w4o"]
+[ext_resource type="Texture2D" uid="uid://dh1ieb114q87q" path="res://player/hands.png" id="2_t8bcn"]
 [ext_resource type="Script" path="res://player/hands.gd" id="2_ula0b"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q6qvj"]
@@ -34,7 +34,7 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = ExtResource("2_c2w4o")
+texture = ExtResource("2_t8bcn")
 script = ExtResource("2_ula0b")
 
 [node name="SniffTimer" type="Timer" parent="Hands"]

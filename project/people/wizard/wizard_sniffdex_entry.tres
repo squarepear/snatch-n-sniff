@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=3 format=3 uid="uid://esxqy0mm4gia"]
+[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=4 format=3 uid="uid://esxqy0mm4gia"]
 
+[ext_resource type="Texture2D" uid="uid://b1na04k2ulp4v" path="res://people/wizard/Hand_With_Wizard.png" id="1_da2ru"]
 [ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_x07f0"]
 [ext_resource type="Texture2D" uid="uid://c7asba44vt71e" path="res://people/wizard/wizard.png" id="1_yqcu5"]
 
@@ -7,5 +8,5 @@
 script = ExtResource("1_x07f0")
 name = "Wizard"
 sprite = ExtResource("1_yqcu5")
-hand_sprite = ExtResource("1_yqcu5")
-sniff_time = 10.0
+hand_sprite = ExtResource("1_da2ru")
+sniff_time = 5.0

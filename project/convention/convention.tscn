@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dw0do2yfovygb" path="res://icon.svg" id="1_exoxq"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_ue6bc"]
-[ext_resource type="PackedScene" uid="uid://b6cb3vsxysnor" path="res://sniffable/pizza/snatchable_object.tscn" id="3_5e1mg"]
+[ext_resource type="PackedScene" uid="uid://b6cb3vsxysnor" path="res://sniffable/snatchable_object.tscn" id="3_5e1mg"]
 [ext_resource type="PackedScene" uid="uid://cdtujo6st3ima" path="res://people/people.tscn" id="4_e0jyn"]
 [ext_resource type="Script" path="res://convention/snatched_alarm.gd" id="5_wqeoe"]
 
@@ -59,7 +59,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46349, -0.000359118, 2.7317
 [node name="Pizza4" parent="." instance=ExtResource("3_5e1mg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48796, -0.000359237, 4.38577)
 
-[node name="Pizza5" parent="." instance=ExtResource("3_5e1mg")]
+[node name="Skunk" parent="." instance=ExtResource("3_5e1mg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.84713, -0.000359118, -3.73158)
 
 [node name="People" parent="." instance=ExtResource("4_e0jyn")]

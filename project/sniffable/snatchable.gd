@@ -4,8 +4,8 @@ extends Node
 # Everything snatchable is sniffable
 signal snatched
 
-@export var sniffdex_entry: SniffdexEntry
 @export var sprite3d: Sprite3D
+@export var sniffdex_entry: SniffdexEntry
 
 
 func _ready():

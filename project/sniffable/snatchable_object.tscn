@@ -1,32 +1,32 @@
 [gd_scene load_steps=12 format=3 uid="uid://b6cb3vsxysnor"]
 
 [ext_resource type="Texture2D" uid="uid://vwf8vnyyao84" path="res://sniffable/pizza/pizza.png" id="1_1tfq0"]
+[ext_resource type="Resource" uid="uid://ckuvaffltylhh" path="res://sniffable/skunk/skunk_sniffdex_entry.tres" id="2_88dcq"]
 [ext_resource type="Script" path="res://sniffable/snatchable.gd" id="2_336o7"]
-[ext_resource type="Resource" uid="uid://dx75m468vxnhw" path="res://sniffable/pizza/pizza_sniffdex_entry.tres" id="2_rlt2u"]
-[ext_resource type="Shader" path="res://sniffable/snatchable.gdshader" id="2_tyswl"]
-[ext_resource type="Shader" path="res://sniffable/pizza/snatchable_center.gdshader" id="3_vj2q0"]
+[ext_resource type="Shader" path="res://sniffable/snatchable.gdshader" id="5_vufki"]
+[ext_resource type="Shader" path="res://sniffable/snatchable_center.gdshader" id="6_rjen3"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_wxkbq"]
 height = 0.64
 radius = 0.32
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_frog8"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_s3p4r"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_b3p3d"]
-noise = SubResource("FastNoiseLite_frog8")
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_bpu25"]
+noise = SubResource("FastNoiseLite_s3p4r")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_j8d6q"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_msdc8"]
 render_priority = 0
-shader = ExtResource("2_tyswl")
+shader = ExtResource("5_vufki")
 shader_parameter/speed = 1.0
-shader_parameter/noise = SubResource("NoiseTexture2D_b3p3d")
+shader_parameter/noise = SubResource("NoiseTexture2D_bpu25")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_jabvx"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0urix"]
 render_priority = 0
-shader = ExtResource("3_vj2q0")
+shader = ExtResource("6_rjen3")
 
-[sub_resource type="SphereMesh" id="SphereMesh_86gfc"]
-material = SubResource("ShaderMaterial_jabvx")
+[sub_resource type="SphereMesh" id="SphereMesh_wcoai"]
+material = SubResource("ShaderMaterial_0urix")
 radial_segments = 59
 
 [node name="SnatchableObject" type="StaticBody3D"]
@@ -44,14 +44,15 @@ billboard = 2
 texture = ExtResource("1_1tfq0")
 
 [node name="Snatchable" type="Node" parent="." node_paths=PackedStringArray("sprite3d")]
+unique_name_in_owner = true
 script = ExtResource("2_336o7")
-sniffdex_entry = ExtResource("2_rlt2u")
 sprite3d = NodePath("../Sprite3D")
+sniffdex_entry = ExtResource("2_88dcq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32, 0)
-material_overlay = SubResource("ShaderMaterial_j8d6q")
+material_overlay = SubResource("ShaderMaterial_msdc8")
 transparency = 0.56
 visibility_range_fade_mode = 1
-mesh = SubResource("SphereMesh_86gfc")
+mesh = SubResource("SphereMesh_wcoai")
 skeleton = NodePath("../Sprite3D")
