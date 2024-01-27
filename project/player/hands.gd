@@ -2,6 +2,10 @@ class_name Hands
 extends TextureRect
 
 
+signal started_sniffing
+signal sniffing_ready
+signal stopped_sniffing
+
 var held_item: SniffdexEntry
 var is_sniffing := false
 var has_sniffed := false
@@ -28,6 +32,7 @@ func start_sniffing() -> void:
 	if is_sniffing or not held_item:
 		return
 
+	started_sniffing.emit()
 	sniff_timer.start(held_item.sniff_time)
 	is_sniffing = true
 
@@ -36,15 +41,19 @@ func sniff_complete() -> void:
 	if not is_sniffing:
 		return
 
-	print("SNIFF MODE ENGAGED")
-
 	has_sniffed = true
+	sniffing_ready.emit()
 
 
 func stop_sniffing() -> void:
+	if not is_sniffing:
+		return
+
 	is_sniffing = false
+	stopped_sniffing.emit()
 
 	if not has_sniffed:
+		sniff_timer.stop()
 		return
 
 	sniff(held_item)
