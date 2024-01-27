@@ -36,4 +36,7 @@ grow_vertical = 0
 texture = ExtResource("2_c2w4o")
 script = ExtResource("2_ula0b")
 
+[node name="SniffTimer" type="Timer" parent="Hands"]
+unique_name_in_owner = true
+
 [connection signal="snatched_snatchable" from="." to="Hands" method="snatch"]
