@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cdtujo6st3ima"]
 
 [ext_resource type="Script" path="res://people/people.gd" id="1_er30i"]
-[ext_resource type="Texture2D" uid="uid://c7asba44vt71e" path="res://people/wizard/wizard.png" id="2_ch11n"]
+[ext_resource type="Texture2D" uid="uid://ee5xcspx4oxl" path="res://people/man.png" id="2_et4eg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lkl4m"]
 height = 2.56
@@ -23,7 +23,7 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.28, 0)
 pixel_size = 0.0025
 billboard = 2
-texture = ExtResource("2_ch11n")
+texture = ExtResource("2_et4eg")
 
 [node name="SnatchbackDetector" type="ShapeCast3D" parent="."]
 unique_name_in_owner = true

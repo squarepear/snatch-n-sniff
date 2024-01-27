@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=4 format=3 uid="uid://cywjgsc68jynq"]
+[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=5 format=3 uid="uid://cywjgsc68jynq"]
 
 [ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_7qdgx"]
+[ext_resource type="Texture2D" uid="uid://egnbtjdfdsl6" path="res://sniffable/bread/Bread_Hand.png" id="1_hue2j"]
 [ext_resource type="Texture2D" uid="uid://de0arx41awch3" path="res://sniffable/bread/Bread.png" id="2_8yegu"]
 [ext_resource type="AudioStream" uid="uid://w2r2t8yl2tge" path="res://audio/bread_sniff.wav" id="2_hw4gb"]
 
@@ -8,5 +9,6 @@
 script = ExtResource("1_7qdgx")
 name = "Bread"
 sprite = ExtResource("2_8yegu")
+hand_sprite = ExtResource("1_hue2j")
 sniff_time = 1.5
 sniff_noise = ExtResource("2_hw4gb")
