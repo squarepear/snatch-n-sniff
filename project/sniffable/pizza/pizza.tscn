@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6cb3vsxysnor"]
+[gd_scene load_steps=5 format=3 uid="uid://b6cb3vsxysnor"]
 
-[ext_resource type="Texture2D" uid="uid://vwf8vnyyao84" path="res://sniffable/pizza/pizza.png" id="1_loctg"]
+[ext_resource type="Texture2D" uid="uid://vwf8vnyyao84" path="res://sniffable/pizza/pizza.png" id="1_1tfq0"]
 [ext_resource type="Script" path="res://sniffable/snatchable.gd" id="2_336o7"]
+[ext_resource type="Resource" uid="uid://dx75m468vxnhw" path="res://sniffable/pizza/pizza_sniffdex_entry.tres" id="2_rlt2u"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_wxkbq"]
 height = 0.64
@@ -19,9 +20,11 @@ shape = SubResource("CylinderShape3D_wxkbq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.32, 0)
 pixel_size = 0.0025
 billboard = 2
-texture = ExtResource("1_loctg")
+texture = ExtResource("1_1tfq0")
 
-[node name="Snatchable" type="Node" parent="."]
+[node name="Snatchable" type="Node" parent="." node_paths=PackedStringArray("sprite3d")]
 script = ExtResource("2_336o7")
+sniffdex_entry = ExtResource("2_rlt2u")
+sprite3d = NodePath("../Sprite3D")
 
 [connection signal="snatched" from="Snatchable" to="." method="queue_free"]
