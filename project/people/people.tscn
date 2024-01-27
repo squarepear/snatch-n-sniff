@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdtujo6st3ima"]
+[gd_scene load_steps=5 format=3 uid="uid://cdtujo6st3ima"]
 
 [ext_resource type="Script" path="res://people/people.gd" id="1_er30i"]
 [ext_resource type="Texture2D" uid="uid://ee5xcspx4oxl" path="res://people/man.png" id="2_2vomf"]
@@ -6,7 +6,12 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lkl4m"]
 height = 2.56
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_i16ww"]
+size = Vector3(1, 2, 1)
+
 [node name="People" type="CharacterBody3D"]
+collision_layer = 8
+collision_mask = 11
 script = ExtResource("1_er30i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -18,3 +23,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.28, 0)
 pixel_size = 0.0025
 billboard = 2
 texture = ExtResource("2_2vomf")
+
+[node name="SnatchbackDetector" type="ShapeCast3D" parent="."]
+unique_name_in_owner = true
+shape = SubResource("BoxShape3D_i16ww")
+target_position = Vector3(0, 1, -1)
+collision_mask = 2

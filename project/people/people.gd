@@ -1,11 +1,14 @@
 extends CharacterBody3D
 
 
-const SPEED = 2.5
+const SPEED = 1.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var chase_target: Node3D
+
+@onready var snatchback_detector = %SnatchbackDetector
+
 
 func _ready():
 	var snatched_alarm: SnatchedAlarm = get_parent().get_node("SnatchedAlarm")
@@ -28,6 +31,25 @@ func _physics_process(delta):
 	velocity.z = direction.z * SPEED
 
 	move_and_slide()
+	
+	_detect_target()
+
+
+func _detect_target() -> void:
+	if not snatchback_detector.is_colliding():
+		return
+
+	print("COLLIDE")
+
+	var body: Node = snatchback_detector.get_collider(0)
+	var hands := Hands.find(body)
+
+	if not hands:
+		return
+
+	print("HANDS")
+
+	hands.drop()
 
 
 func chase(node: Node3D) -> void:

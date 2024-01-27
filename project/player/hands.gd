@@ -75,8 +75,14 @@ func sniff(sniffdex_entry: SniffdexEntry) -> void:
 	if not sniffdex_entry:
 		return
 
+	drop()
+
+
+func drop() -> void:
 	texture = hand_texture
 	held_item = null
+	
+	completed_sniffing.emit()
 
 
 func _shake(amount: float, delta: float) -> void:
@@ -92,3 +98,12 @@ func _input(event: InputEvent):
 		start_sniffing()
 	if event.is_action_released("sniff"):
 		stop_sniffing()
+
+
+static func find(parent: Node) -> Hands:
+	for child in parent.get_children():
+		if child is Hands:
+			return child
+
+	return null
+
