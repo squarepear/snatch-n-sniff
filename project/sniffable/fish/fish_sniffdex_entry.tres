@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=3 format=3 uid="uid://dbd2715y8oin1"]
+[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=5 format=3 uid="uid://dbd2715y8oin1"]
 
 [ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_sdp8d"]
+[ext_resource type="Texture2D" uid="uid://cnfs4kl4jtp4c" path="res://sniffable/fish/Fish_Hand.png" id="1_ubwje"]
+[ext_resource type="AudioStream" uid="uid://dnuegllq5352n" path="res://audio/fish_sniff.wav" id="2_jgub2"]
 [ext_resource type="Texture2D" uid="uid://m27fy6hveiat" path="res://sniffable/fish/Fish.png" id="2_o3ymv"]
 
 [resource]
 script = ExtResource("1_sdp8d")
 name = "Fish"
 sprite = ExtResource("2_o3ymv")
+hand_sprite = ExtResource("1_ubwje")
 sniff_time = 2.0
+sniff_noise = ExtResource("2_jgub2")

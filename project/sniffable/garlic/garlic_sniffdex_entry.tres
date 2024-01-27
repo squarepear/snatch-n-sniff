@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=3 format=3 uid="uid://cxnhxpu1mwxc8"]
+[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=5 format=3 uid="uid://cxnhxpu1mwxc8"]
 
 [ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_3lkil"]
+[ext_resource type="Texture2D" uid="uid://dplpjqsehaag2" path="res://sniffable/garlic/Garlick_Hand.png" id="1_gedui"]
 [ext_resource type="Texture2D" uid="uid://cgpdyt7sop3ma" path="res://sniffable/garlic/Garlick.png" id="2_85j8f"]
+[ext_resource type="AudioStream" uid="uid://d0lur7d5ys3ma" path="res://audio/garlic_sniff.wav" id="2_bj6du"]
 
 [resource]
 script = ExtResource("1_3lkil")
 name = "Garlic"
 sprite = ExtResource("2_85j8f")
+hand_sprite = ExtResource("1_gedui")
 sniff_time = 2.0
+sniff_noise = ExtResource("2_bj6du")

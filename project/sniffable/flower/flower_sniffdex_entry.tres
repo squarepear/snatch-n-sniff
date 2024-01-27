@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=3 format=3 uid="uid://ddne6uem88p2j"]
+[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=5 format=3 uid="uid://ddne6uem88p2j"]
 
+[ext_resource type="Texture2D" uid="uid://b2mne0pt0kfbs" path="res://sniffable/flower/Flower_Hand.png" id="1_rganq"]
 [ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_uf0os"]
 [ext_resource type="Texture2D" uid="uid://cp4yodspkcvxj" path="res://sniffable/flower/Flower.png" id="2_31kcu"]
+[ext_resource type="AudioStream" uid="uid://bauwswto8nsnu" path="res://audio/flower_sniff.wav" id="2_vqn6e"]
 
 [resource]
 script = ExtResource("1_uf0os")
 name = "Flower"
 sprite = ExtResource("2_31kcu")
+hand_sprite = ExtResource("1_rganq")
 sniff_time = 2.0
+sniff_noise = ExtResource("2_vqn6e")

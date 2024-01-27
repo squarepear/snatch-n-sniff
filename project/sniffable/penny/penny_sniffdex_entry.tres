@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=3 format=3 uid="uid://sf6m82m10gjs"]
+[gd_resource type="Resource" script_class="SniffdexEntry" load_steps=5 format=3 uid="uid://sf6m82m10gjs"]
 
 [ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_8yq7m"]
+[ext_resource type="Texture2D" uid="uid://b8xq3ovnex6t" path="res://sniffable/penny/Penny_Hand.png" id="1_mo6ow"]
 [ext_resource type="Texture2D" uid="uid://dss6ouptfsnff" path="res://sniffable/penny/Penny.png" id="2_rjf6s"]
+[ext_resource type="AudioStream" uid="uid://dc73r6n6xinhs" path="res://audio/penny_sniff.wav" id="2_v1rby"]
 
 [resource]
 script = ExtResource("1_8yq7m")
 name = "Penny"
 sprite = ExtResource("2_rjf6s")
+hand_sprite = ExtResource("1_mo6ow")
 sniff_time = 0.5
+sniff_noise = ExtResource("2_v1rby")
