@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://biyxmgxkfhwg1"]
+
+[ext_resource type="Script" path="res://game/audio_bus_slider.gd" id="1_7xgkb"]
+[ext_resource type="AudioStream" uid="uid://8dcvalxwinyi" path="res://audio/evil_penny_sniff.wav" id="2_cc0gi"]
+[ext_resource type="Theme" uid="uid://cn5n7njk5y1gx" path="res://text.theme" id="3_brb5l"]
+
+[node name="AudioBusSlider" type="HSlider"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -284.0
+offset_top = -25.0
+offset_right = 284.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+script = ExtResource("1_7xgkb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cc0gi")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.5
+offset_top = -85.0
+offset_right = 169.5
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_brb5l")
+text = "Master: 100"
+
+[connection signal="drag_ended" from="." to="." method="_on_drag_ended"]
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]
