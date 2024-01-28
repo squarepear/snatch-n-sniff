@@ -1,9 +1,9 @@
-[gd_scene load_steps=41 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=43 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_672hu"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_dja8k"]
 [ext_resource type="Theme" uid="uid://cn5n7njk5y1gx" path="res://text.theme" id="2_xqlbo"]
-[ext_resource type="PackedScene" path="res://game/audio_bus_slider.tscn" id="3_hoxnt"]
+[ext_resource type="PackedScene" uid="uid://biyxmgxkfhwg1" path="res://game/audio_bus_slider.tscn" id="3_hoxnt"]
 [ext_resource type="PackedScene" uid="uid://cdtujo6st3ima" path="res://people/people.tscn" id="3_m0ktx"]
 [ext_resource type="Texture2D" uid="uid://c7asba44vt71e" path="res://people/wizard/wizard.png" id="4_cfeve"]
 [ext_resource type="PackedScene" uid="uid://c7h2x3iridqsl" path="res://convention/convention_center/convention_center.tscn" id="4_n1vo4"]
@@ -12,7 +12,7 @@
 [ext_resource type="SpriteFrames" uid="uid://fmdjairnwcso" path="res://convention/alarm/alarm_off_animation.tres" id="6_lojj0"]
 [ext_resource type="Texture2D" uid="uid://dq1y8whwhrqs" path="res://people/peasant.png" id="7_vssvw"]
 [ext_resource type="Texture2D" uid="uid://dimdpld6m74fr" path="res://people/Steamboat_Willie.png" id="8_cticb"]
-[ext_resource type="AudioStream" uid="uid://bk3puk6268nse" path="res://audio/wizard_takes.wav" id="8_i7jfc"]
+[ext_resource type="AudioStream" uid="uid://dr7heer8o0r3" path="res://audio/wizard_takes.wav" id="8_i7jfc"]
 [ext_resource type="Script" path="res://convention/alarm/snatched_alarm.gd" id="8_laknp"]
 [ext_resource type="PackedScene" uid="uid://cvronse8odauh" path="res://sniffable/pizza/pizza.tscn" id="9_dnfsy"]
 [ext_resource type="AudioStream" uid="uid://caqu68u4bciak" path="res://audio/wizard_snatch_attempt.wav" id="9_jinl1"]
@@ -21,19 +21,21 @@
 [ext_resource type="PackedScene" uid="uid://im8p86adbjiy" path="res://sniffable/shoe/shoe.tscn" id="13_k3wx2"]
 [ext_resource type="PackedScene" uid="uid://d0lhdmahcw77t" path="res://sniffable/penny/penny.tscn" id="14_3rt0l"]
 [ext_resource type="Texture2D" uid="uid://c7jc2iarcryqn" path="res://people/clown.png" id="15_3cd7s"]
+[ext_resource type="AudioStream" uid="uid://dwqimjgupaq66" path="res://audio/peasant_takes.wav" id="15_161hp"]
+[ext_resource type="AudioStream" uid="uid://jt8oukg8l0wf" path="res://audio/peasant_snatch_attempt.wav" id="16_wwhq6"]
 [ext_resource type="PackedScene" uid="uid://bww8472hoeo5r" path="res://sniffable/bread/bread.tscn" id="17_fy8gt"]
 [ext_resource type="PackedScene" uid="uid://dof8hlw3tknqb" path="res://sniffable/fish/fish.tscn" id="18_1x67r"]
 [ext_resource type="PackedScene" uid="uid://vq560ifaj3ic" path="res://sniffable/evil_penny/evil_penny.tscn" id="19_if7gk"]
 [ext_resource type="PackedScene" uid="uid://6x5ho8xj1gvm" path="res://sniffable/deodorant/deodorant.tscn" id="20_85e3n"]
-[ext_resource type="AudioStream" uid="uid://bkaavofjnolx7" path="res://audio/steamboat_willie_takes.wav" id="21_3iahs"]
+[ext_resource type="AudioStream" uid="uid://dvxrho56ospx" path="res://audio/steamboat_willie_takes.wav" id="21_3iahs"]
 [ext_resource type="PackedScene" uid="uid://sws8ip0qxc3x" path="res://sniffable/rotten_egg/rotten_egg.tscn" id="21_usbll"]
-[ext_resource type="AudioStream" uid="uid://b2xmrmxnd47j6" path="res://audio/steamboat_willie_snatch_attempt.wav" id="22_15iwo"]
+[ext_resource type="AudioStream" uid="uid://cm14d065s6qrq" path="res://audio/steamboat_willie_snatch_attempt.wav" id="22_15iwo"]
 [ext_resource type="PackedScene" uid="uid://e5clwnu35xek" path="res://sniffable/brass_horn/brass_horn.tscn" id="22_gus5u"]
 [ext_resource type="Texture2D" uid="uid://cet8jhwfj7ipi" path="res://people/Mean_Guy.png" id="23_0df2b"]
 [ext_resource type="Texture2D" uid="uid://7ydwxtnbmijv" path="res://people/Normal_Guy.png" id="24_o6gwv"]
 [ext_resource type="AudioStream" uid="uid://dpr5va6vqgr7d" path="res://audio/clown_takes.wav" id="24_sln6y"]
 [ext_resource type="AudioStream" uid="uid://orbaqi3hqt2s" path="res://audio/mean_guy_takes.wav" id="24_ulqxl"]
-[ext_resource type="AudioStream" uid="uid://bdyd46iab35xx" path="res://audio/clown_snatch_attempt.wav" id="25_qjmc1"]
+[ext_resource type="AudioStream" uid="uid://bmf24kdes34t5" path="res://audio/clown_snatch_attempt.wav" id="25_qjmc1"]
 [ext_resource type="Texture2D" uid="uid://ci8d2rgod6sl0" path="res://people/Gray.png" id="25_thlme"]
 [ext_resource type="PackedScene" uid="uid://bmi5bjrsdensn" path="res://game/end_tracker.tscn" id="32_wcqxp"]
 [ext_resource type="PackedScene" uid="uid://bumj34nleyouw" path="res://sniffable/clipboard/clipboard.tscn" id="34_tpm8u"]
@@ -190,6 +192,14 @@ sniffdex_entry = ExtResource("6_14klo")
 [node name="Peasant" parent="World" instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00101, -0.053484, 6.00074)
 sprite_texture = ExtResource("7_vssvw")
+taking_audio = ExtResource("15_161hp")
+snatch_attempt_audio = ExtResource("16_wwhq6")
+
+[node name="Peasant2" parent="World" instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.03621, -0.053484, -9.35663)
+sprite_texture = ExtResource("7_vssvw")
+taking_audio = ExtResource("15_161hp")
+snatch_attempt_audio = ExtResource("16_wwhq6")
 
 [node name="Pizza" parent="World" instance=ExtResource("9_dnfsy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0824, 1.19257, 12.227)
@@ -204,7 +214,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.3655, 1.28091, 3.04953)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.6972, 1.24541, 12.464)
 
 [node name="Skunk2" parent="World" instance=ExtResource("10_um7we")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4034, 0.145956, 19.9389)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9436, 0.145956, 20.6038)
+
+[node name="Skunk3" parent="World" instance=ExtResource("10_um7we")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.44874, 1.30873, 11.3266)
+
+[node name="Skunk4" parent="World" instance=ExtResource("10_um7we")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.90718, 1.30873, 8.91949)
+
+[node name="Skunk5" parent="World" instance=ExtResource("10_um7we")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.33729, 1.30873, 2.97935)
 
 [node name="Orange" parent="World" instance=ExtResource("12_bs1ww")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.1656, 1.2633, 1.69057)
@@ -213,7 +232,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.1656, 1.2633, 1.69057)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5794, 1.17144, 27.3575)
 
 [node name="Penny" parent="World" instance=ExtResource("14_3rt0l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.07435, -0.000359148, -0.958267)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.0872, 1.23901, 12.0753)
 
 [node name="SteamboatWillie" parent="World" instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6687, 0.0603135, -9.16534)
@@ -221,8 +240,20 @@ sprite_texture = ExtResource("8_cticb")
 taking_audio = ExtResource("21_3iahs")
 snatch_attempt_audio = ExtResource("22_15iwo")
 
+[node name="SteamboatWillie2" parent="World" instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.1548, 0.0603135, -7.92159)
+sprite_texture = ExtResource("8_cticb")
+taking_audio = ExtResource("21_3iahs")
+snatch_attempt_audio = ExtResource("22_15iwo")
+
 [node name="Clown" parent="World" instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.181, -0.0451487, -19.2528)
+sprite_texture = ExtResource("15_3cd7s")
+taking_audio = ExtResource("24_sln6y")
+snatch_attempt_audio = ExtResource("25_qjmc1")
+
+[node name="Clown2" parent="World" instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.657, -0.0451487, -26.7362)
 sprite_texture = ExtResource("15_3cd7s")
 taking_audio = ExtResource("24_sln6y")
 snatch_attempt_audio = ExtResource("25_qjmc1")
@@ -243,22 +274,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9586, 1.15042, -19.4784)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5294, 1.03682, -15.1653)
 
 [node name="EvilPenny2" parent="World" instance=ExtResource("19_if7gk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49629, 0, 4.01855)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6939, 1.29762, 28.2318)
 
 [node name="Deodorant" parent="World" instance=ExtResource("20_85e3n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6161, 1.25942, -27.3095)
 
 [node name="RottenEgg" parent="World" instance=ExtResource("21_usbll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29025, 0, -26.926)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9656, 1.22508, -2.18197)
 
 [node name="BrassHorn" parent="World" instance=ExtResource("22_gus5u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.9814, 1.93428, -26.7905)
 
 [node name="BrassHorn2" parent="World" instance=ExtResource("22_gus5u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1582, 0, -6.77778)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3163, 0.0362972, -26.1355)
 
 [node name="BrassHorn3" parent="World" instance=ExtResource("22_gus5u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3116, -4.76837e-07, 4.88729)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.6864, -4.76837e-07, -15.2515)
 
 [node name="Mean" parent="World" instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4389, -0.053484, 7.11517)
@@ -266,8 +297,18 @@ sprite_texture = ExtResource("23_0df2b")
 taking_audio = ExtResource("24_ulqxl")
 snatch_attempt_audio = ExtResource("34_ywpbq")
 
+[node name="Mean2" parent="World" instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.19059, -0.053484, 23.4829)
+sprite_texture = ExtResource("23_0df2b")
+taking_audio = ExtResource("24_ulqxl")
+snatch_attempt_audio = ExtResource("34_ywpbq")
+
 [node name="Snakes" parent="World" instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00101, -0.053484, -23.7062)
+sprite_texture = ExtResource("24_o6gwv")
+
+[node name="Snakes2" parent="World" instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.30415, -0.053484, -23.5471)
 sprite_texture = ExtResource("24_o6gwv")
 
 [node name="Clipboard" parent="World" instance=ExtResource("34_tpm8u")]
@@ -280,34 +321,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.78657, 1.15024, -29.8873)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8571, -0.053484, 16.6424)
 sprite_texture = ExtResource("25_thlme")
 
+[node name="Cool2" parent="World" instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.01669, -0.053484, 5.58021)
+sprite_texture = ExtResource("25_thlme")
+
 [node name="EndTracker" parent="World" instance=ExtResource("32_wcqxp")]
-
-[node name="Flower" parent="." instance=ExtResource("38_pviwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2647, 0, 9.54816)
-
-[node name="Flower2" parent="." instance=ExtResource("38_pviwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4862, 0, -18.2613)
-
-[node name="Garlic" parent="." instance=ExtResource("39_vucid")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.33047, 0, 22.4545)
-
-[node name="Garlic2" parent="." instance=ExtResource("39_vucid")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7269, 1.22528, 22.7917)
-
-[node name="Skunk" parent="." instance=ExtResource("10_um7we")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5382, 1.22528, 23.4173)
-
-[node name="Skunk2" parent="." instance=ExtResource("10_um7we")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6473, 1.22528, 21.5575)
-
-[node name="RottenEgg" parent="." instance=ExtResource("21_usbll")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0989, 1.24754, 12.2652)
-
-[node name="Garlic3" parent="." instance=ExtResource("39_vucid")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5487, 1.24754, 12.3578)
-
-[node name="Flower3" parent="." instance=ExtResource("38_pviwt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.629, 1.22528, -12.6187)
 
 [node name="PointsOfInterest" type="Node3D" parent="World"]
 unique_name_in_owner = true
@@ -329,6 +347,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117416, 0, -25.6902)
 
 [node name="Marker3D4" type="Marker3D" parent="World/PointsOfInterest"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117416, 0, 26.4847)
+
+[node name="Flower" parent="." instance=ExtResource("38_pviwt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58915, 1.2233, -11.5727)
+
+[node name="Flower2" parent="." instance=ExtResource("38_pviwt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.2094, -0.0113561, -24.2584)
+
+[node name="Garlic" parent="." instance=ExtResource("39_vucid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6367, 1.24237, -2.61824)
+
+[node name="Garlic2" parent="." instance=ExtResource("39_vucid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7269, 1.22528, 22.7917)
+
+[node name="Skunk" parent="." instance=ExtResource("10_um7we")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5382, 1.22528, 23.4173)
+
+[node name="Skunk2" parent="." instance=ExtResource("10_um7we")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6473, 1.22528, 21.5575)
+
+[node name="RottenEgg" parent="." instance=ExtResource("21_usbll")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0989, 1.24754, 12.2652)
+
+[node name="Garlic3" parent="." instance=ExtResource("39_vucid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5487, 1.24754, 12.3578)
+
+[node name="Flower3" parent="." instance=ExtResource("38_pviwt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.629, 1.22528, -12.6187)
 
 [connection signal="pressed" from="PauseMenu/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PauseMenu/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
