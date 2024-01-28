@@ -222,10 +222,25 @@ texture = ExtResource("6_nl1g2")
 [node name="Tables" type="Node3D" parent="."]
 
 [node name="Table" parent="Tables" instance=ExtResource("12_boayo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7435, -0.000358909, -5.90254)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.4936, -0.000358909, -15.1772)
 
 [node name="Table2" parent="Tables" instance=ExtResource("12_boayo")]
-transform = Transform3D(0.894864, 0, 0.446338, 0, 1, 0, -0.446338, 0, 0.894864, -1.13624, -0.000358909, -1.72648)
+transform = Transform3D(0.894864, 0, 0.446338, 0, 1, 0, -0.446338, 0, 0.894864, -9.91092, -0.000358909, -30.0651)
+
+[node name="Table3" parent="Tables" instance=ExtResource("12_boayo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2283, -0.000358909, -2.86424)
+
+[node name="Table4" parent="Tables" instance=ExtResource("12_boayo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2372, -0.000358909, -1.33589)
+
+[node name="Table5" parent="Tables" instance=ExtResource("12_boayo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2372, -0.000358909, 0.198798)
+
+[node name="Table6" parent="Tables" instance=ExtResource("12_boayo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2372, -0.000358909, 1.75238)
+
+[node name="Table7" parent="Tables" instance=ExtResource("12_boayo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.2372, -0.000358909, 3.29144)
 
 [node name="Speakers" type="Node3D" parent="."]
 
