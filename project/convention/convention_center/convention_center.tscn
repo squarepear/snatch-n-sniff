@@ -128,12 +128,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.37989, 2.94881, -31.9953)
 texture = ExtResource("3_6hs6n")
 
 [node name="JammersPoster" type="Sprite3D" parent="Posters"]
-transform = Transform3D(0.976672, 0.214735, 0, -0.214735, 0.976672, 0, 0, 0, 1, -9.0147, 2.53898, 31.4088)
+transform = Transform3D(0.976672, 0.214735, 0, -0.214735, 0.976672, 0, 0, 0, 1, -9.0147, 2.53898, 31.9383)
 flip_h = true
 texture = ExtResource("4_qhg2x")
 
 [node name="WhatPoster" type="Sprite3D" parent="Posters"]
-transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, 8.67682, 2.74362, 31.4088)
+transform = Transform3D(0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, 8.67682, 2.74362, 31.9884)
 flip_h = true
 texture = ExtResource("5_t81hs")
 
@@ -221,18 +221,18 @@ pixel_size = 0.005
 texture = ExtResource("8_0ow58")
 
 [node name="SkunkPoster19" type="Sprite3D" parent="Posters"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.0891, 2.90097, 15.5267)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.0891, 2.90097, 15.9308)
 flip_h = true
 pixel_size = 0.02
 texture = ExtResource("8_0ow58")
 
 [node name="SkunkPoster20" type="Sprite3D" parent="Posters"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2612, 2.04859, 15.5267)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2612, 2.04859, 15.954)
 flip_h = true
 texture = ExtResource("8_0ow58")
 
 [node name="SkunkPoster21" type="Sprite3D" parent="Posters"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2182, 3.91713, 15.5267)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2182, 3.91713, 15.933)
 pixel_size = 0.005
 texture = ExtResource("8_0ow58")
 
