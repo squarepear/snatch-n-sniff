@@ -28,6 +28,7 @@ func activate() -> void:
 	activated.emit(target)
 	sprite_frames = on_animation
 	play()
+	get_tree().call_group("lights", "turn_red")
 
 
 func deactivate() -> void:
@@ -36,3 +37,5 @@ func deactivate() -> void:
 	deactivated.emit()
 	sprite_frames = off_animation
 	stop()
+	get_tree().call_group("lights", "return_to_normal")
+	

@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://lnwogpjkn7xi"]
+[gd_scene load_steps=3 format=3 uid="uid://lnwogpjkn7xi"]
 
 [ext_resource type="PackedScene" uid="uid://bkanbstwme75i" path="res://convention/light/convention_light.blend" id="1_govgp"]
+[ext_resource type="Script" path="res://convention/light/convention_light.gd" id="1_ht3rn"]
 
-[node name="SpotLight3D" type="SpotLight3D"]
+[node name="SpotLight3D" type="SpotLight3D" groups=["lights"]]
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 5.9, 0)
 light_color = Color(1, 1, 0.933333, 1)
 shadow_enabled = true
@@ -10,6 +11,7 @@ spot_range = 17.657
 spot_attenuation = 0.366022
 spot_angle = 70.0
 spot_angle_attenuation = 0.267943
+script = ExtResource("1_ht3rn")
 
 [node name="convention_light" parent="." instance=ExtResource("1_govgp")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0.1)
