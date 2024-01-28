@@ -19,7 +19,6 @@ func snatch() -> void:
 		return
 	var body: Node = snatch_detector.get_collider(0)
 	var snatchable := Snatchable.find(body)
-	print(body)
 	if body is Person:
 		snatch_attempt_player.stream = body.get_snatch_attempt_audio()
 		snatch_attempt_player.play()
