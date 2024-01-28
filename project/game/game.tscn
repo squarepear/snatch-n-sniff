@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=47 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_672hu"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_dja8k"]
@@ -40,8 +40,12 @@
 [ext_resource type="PackedScene" uid="uid://bmi5bjrsdensn" path="res://game/end_tracker.tscn" id="32_wcqxp"]
 [ext_resource type="PackedScene" uid="uid://bumj34nleyouw" path="res://sniffable/clipboard/clipboard.tscn" id="34_tpm8u"]
 [ext_resource type="AudioStream" uid="uid://bwkolt10htfjm" path="res://audio/mean_guy_snatch_attempt.wav" id="34_ywpbq"]
+[ext_resource type="AudioStream" uid="uid://draw3ocgooeja" path="res://audio/snakes_takes.wav" id="38_0pryc"]
 [ext_resource type="PackedScene" uid="uid://oagvphpg8b2f" path="res://sniffable/flower/flower.tscn" id="38_pviwt"]
+[ext_resource type="AudioStream" uid="uid://bs8otvmcoocp7" path="res://audio/snakes_snatch_attempt.wav" id="39_oij25"]
 [ext_resource type="PackedScene" uid="uid://dgdp73gydedaa" path="res://sniffable/garlic/garlic.tscn" id="39_vucid"]
+[ext_resource type="AudioStream" uid="uid://cjynilutg6qh8" path="res://audio/cool_takes.wav" id="42_6qy5v"]
+[ext_resource type="AudioStream" uid="uid://b3lueyw268uht" path="res://audio/cool_snatch_attempt.wav" id="43_pocfh"]
 
 [node name="Game" type="Node3D"]
 process_mode = 3
@@ -306,10 +310,14 @@ snatch_attempt_audio = ExtResource("34_ywpbq")
 [node name="Snakes" parent="World" instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00101, -0.053484, -23.7062)
 sprite_texture = ExtResource("24_o6gwv")
+taking_audio = ExtResource("38_0pryc")
+snatch_attempt_audio = ExtResource("39_oij25")
 
 [node name="Snakes2" parent="World" instance=ExtResource("3_m0ktx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.30415, -0.053484, -23.5471)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.29472, -0.053484, -19.9302)
 sprite_texture = ExtResource("24_o6gwv")
+taking_audio = ExtResource("38_0pryc")
+snatch_attempt_audio = ExtResource("39_oij25")
 
 [node name="Clipboard" parent="World" instance=ExtResource("34_tpm8u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1606, 1.22528, -27.0462)
@@ -320,10 +328,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.78657, 1.15024, -29.8873)
 [node name="Cool" parent="World" instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8571, -0.053484, 16.6424)
 sprite_texture = ExtResource("25_thlme")
+taking_audio = ExtResource("42_6qy5v")
+snatch_attempt_audio = ExtResource("43_pocfh")
 
 [node name="Cool2" parent="World" instance=ExtResource("3_m0ktx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.01669, -0.053484, 5.58021)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.66688, -0.053484, 10.6167)
 sprite_texture = ExtResource("25_thlme")
+taking_audio = ExtResource("42_6qy5v")
+snatch_attempt_audio = ExtResource("43_pocfh")
 
 [node name="EndTracker" parent="World" instance=ExtResource("32_wcqxp")]
 
@@ -348,31 +360,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117416, 0, -25.6902)
 [node name="Marker3D4" type="Marker3D" parent="World/PointsOfInterest"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117416, 0, 26.4847)
 
-[node name="Flower" parent="." instance=ExtResource("38_pviwt")]
+[node name="Flower" parent="World" instance=ExtResource("38_pviwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58915, 1.2233, -11.5727)
 
-[node name="Flower2" parent="." instance=ExtResource("38_pviwt")]
+[node name="Flower2" parent="World" instance=ExtResource("38_pviwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.2094, -0.0113561, -24.2584)
 
-[node name="Garlic" parent="." instance=ExtResource("39_vucid")]
+[node name="Garlic" parent="World" instance=ExtResource("39_vucid")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6367, 1.24237, -2.61824)
 
-[node name="Garlic2" parent="." instance=ExtResource("39_vucid")]
+[node name="Garlic2" parent="World" instance=ExtResource("39_vucid")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7269, 1.22528, 22.7917)
 
-[node name="Skunk" parent="." instance=ExtResource("10_um7we")]
+[node name="Skunk6" parent="World" instance=ExtResource("10_um7we")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5382, 1.22528, 23.4173)
 
-[node name="Skunk2" parent="." instance=ExtResource("10_um7we")]
+[node name="Skunk7" parent="World" instance=ExtResource("10_um7we")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6473, 1.22528, 21.5575)
 
-[node name="RottenEgg" parent="." instance=ExtResource("21_usbll")]
+[node name="RottenEgg2" parent="World" instance=ExtResource("21_usbll")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0989, 1.24754, 12.2652)
 
-[node name="Garlic3" parent="." instance=ExtResource("39_vucid")]
+[node name="Garlic3" parent="World" instance=ExtResource("39_vucid")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5487, 1.24754, 12.3578)
 
-[node name="Flower3" parent="." instance=ExtResource("38_pviwt")]
+[node name="Flower3" parent="World" instance=ExtResource("38_pviwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.629, 1.22528, -12.6187)
 
 [connection signal="pressed" from="PauseMenu/ResumeButton" to="." method="_on_resume_button_pressed"]
