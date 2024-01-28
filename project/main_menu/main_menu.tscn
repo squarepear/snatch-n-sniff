@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://ce8yb1imqpjw8" path="res://main_menu/Title_Banner.png" id="2_1832d"]
 [ext_resource type="Texture2D" uid="uid://cxkxuefs1ahhf" path="res://sniffable/shoe/Shoe_Hand.png" id="3_n2nrb"]
 [ext_resource type="Texture2D" uid="uid://b8xq3ovnex6t" path="res://sniffable/penny/Penny_Hand.png" id="4_xmmj7"]
-[ext_resource type="AudioStream" uid="uid://dsf7xofoppsiq" path="res://audio/shoe_sniff.wav" id="5_yyeht"]
-[ext_resource type="AudioStream" uid="uid://hqp844y4cytl" path="res://audio/penny_sniff.wav" id="6_m2ohy"]
+[ext_resource type="AudioStream" uid="uid://dr0rdfqgt0fsu" path="res://audio/shoe_sniff.wav" id="5_yyeht"]
+[ext_resource type="AudioStream" uid="uid://dc73r6n6xinhs" path="res://audio/penny_sniff.wav" id="6_m2ohy"]
 
 [sub_resource type="Animation" id="Animation_xe3a0"]
 length = 0.001
