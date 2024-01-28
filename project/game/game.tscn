@@ -308,8 +308,18 @@ sprite_texture = ExtResource("23_0df2b")
 taking_audio = ExtResource("24_ulqxl")
 snatch_attempt_audio = ExtResource("34_ywpbq")
 
+[node name="Mean2" parent="World" instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.19059, -0.053484, 23.4829)
+sprite_texture = ExtResource("23_0df2b")
+taking_audio = ExtResource("24_ulqxl")
+snatch_attempt_audio = ExtResource("34_ywpbq")
+
 [node name="Snakes" parent="World" instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00101, -0.053484, -23.7062)
+sprite_texture = ExtResource("24_o6gwv")
+
+[node name="Snakes2" parent="World" instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.52241, -0.053484, -10.4197)
 sprite_texture = ExtResource("24_o6gwv")
 
 [node name="Clipboard" parent="World" instance=ExtResource("34_tpm8u")]
