@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfmwvldqikic0"]
+[gd_scene load_steps=7 format=3 uid="uid://cfmwvldqikic0"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_4hlq1"]
 [ext_resource type="Texture2D" uid="uid://dh1ieb114q87q" path="res://player/hands.png" id="2_t8bcn"]
 [ext_resource type="Script" path="res://player/hands.gd" id="2_ula0b"]
+[ext_resource type="AudioStream" uid="uid://b660jwebsbjq7" path="res://audio/snatched_alarm.wav" id="4_6icsw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q6qvj"]
 
@@ -42,6 +43,11 @@ texture = ExtResource("2_t8bcn")
 shape = SubResource("BoxShape3D_jolpg")
 target_position = Vector3(0, 1, -1)
 collision_mask = 4
+
+[node name="SnatchedAlarm" type="AudioStreamPlayer" parent="Hands"]
+unique_name_in_owner = true
+stream = ExtResource("4_6icsw")
+volume_db = -10.0
 
 [node name="SniffNoises" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
