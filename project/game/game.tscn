@@ -1,9 +1,9 @@
-[gd_scene load_steps=41 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=43 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_672hu"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_dja8k"]
 [ext_resource type="Theme" uid="uid://cn5n7njk5y1gx" path="res://text.theme" id="2_xqlbo"]
-[ext_resource type="PackedScene" path="res://game/audio_bus_slider.tscn" id="3_hoxnt"]
+[ext_resource type="PackedScene" uid="uid://biyxmgxkfhwg1" path="res://game/audio_bus_slider.tscn" id="3_hoxnt"]
 [ext_resource type="PackedScene" uid="uid://cdtujo6st3ima" path="res://people/people.tscn" id="3_m0ktx"]
 [ext_resource type="Texture2D" uid="uid://c7asba44vt71e" path="res://people/wizard/wizard.png" id="4_cfeve"]
 [ext_resource type="PackedScene" uid="uid://c7h2x3iridqsl" path="res://convention/convention_center/convention_center.tscn" id="4_n1vo4"]
@@ -12,7 +12,7 @@
 [ext_resource type="SpriteFrames" uid="uid://fmdjairnwcso" path="res://convention/alarm/alarm_off_animation.tres" id="6_lojj0"]
 [ext_resource type="Texture2D" uid="uid://dq1y8whwhrqs" path="res://people/peasant.png" id="7_vssvw"]
 [ext_resource type="Texture2D" uid="uid://dimdpld6m74fr" path="res://people/Steamboat_Willie.png" id="8_cticb"]
-[ext_resource type="AudioStream" uid="uid://bk3puk6268nse" path="res://audio/wizard_takes.wav" id="8_i7jfc"]
+[ext_resource type="AudioStream" uid="uid://dr7heer8o0r3" path="res://audio/wizard_takes.wav" id="8_i7jfc"]
 [ext_resource type="Script" path="res://convention/alarm/snatched_alarm.gd" id="8_laknp"]
 [ext_resource type="PackedScene" uid="uid://cvronse8odauh" path="res://sniffable/pizza/pizza.tscn" id="9_dnfsy"]
 [ext_resource type="AudioStream" uid="uid://caqu68u4bciak" path="res://audio/wizard_snatch_attempt.wav" id="9_jinl1"]
@@ -21,6 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://im8p86adbjiy" path="res://sniffable/shoe/shoe.tscn" id="13_k3wx2"]
 [ext_resource type="PackedScene" uid="uid://d0lhdmahcw77t" path="res://sniffable/penny/penny.tscn" id="14_3rt0l"]
 [ext_resource type="Texture2D" uid="uid://c7jc2iarcryqn" path="res://people/clown.png" id="15_3cd7s"]
+[ext_resource type="AudioStream" uid="uid://xtkplic44aq5" path="res://audio/peasant_takes.wav" id="15_161hp"]
+[ext_resource type="AudioStream" uid="uid://b8k4mwdilv8v0" path="res://audio/peasant_snatch_attempt.wav" id="16_wwhq6"]
 [ext_resource type="PackedScene" uid="uid://bww8472hoeo5r" path="res://sniffable/bread/bread.tscn" id="17_fy8gt"]
 [ext_resource type="PackedScene" uid="uid://dof8hlw3tknqb" path="res://sniffable/fish/fish.tscn" id="18_1x67r"]
 [ext_resource type="PackedScene" uid="uid://vq560ifaj3ic" path="res://sniffable/evil_penny/evil_penny.tscn" id="19_if7gk"]
@@ -190,6 +192,8 @@ sniffdex_entry = ExtResource("6_14klo")
 [node name="Peasant" parent="World" instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00101, -0.053484, 6.00074)
 sprite_texture = ExtResource("7_vssvw")
+taking_audio = ExtResource("15_161hp")
+snatch_attempt_audio = ExtResource("16_wwhq6")
 
 [node name="Pizza" parent="World" instance=ExtResource("9_dnfsy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0824, 1.19257, 12.227)
@@ -282,6 +286,27 @@ sprite_texture = ExtResource("25_thlme")
 
 [node name="EndTracker" parent="World" instance=ExtResource("32_wcqxp")]
 
+[node name="PointsOfInterest" type="Node3D" parent="World"]
+unique_name_in_owner = true
+
+[node name="Marker3D" type="Marker3D" parent="World/PointsOfInterest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.0856, 0, 0)
+
+[node name="Marker3D2" type="Marker3D" parent="World/PointsOfInterest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117416, 0, 0)
+
+[node name="Marker3D5" type="Marker3D" parent="World/PointsOfInterest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7758, 0, 0)
+
+[node name="Marker3D6" type="Marker3D" parent="World/PointsOfInterest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7758, 0, -22.3305)
+
+[node name="Marker3D3" type="Marker3D" parent="World/PointsOfInterest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117416, 0, -25.6902)
+
+[node name="Marker3D4" type="Marker3D" parent="World/PointsOfInterest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117416, 0, 26.4847)
+
 [node name="Flower" parent="." instance=ExtResource("38_pviwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2647, 0, 9.54816)
 
@@ -308,27 +333,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5487, 1.24754, 12.3578)
 
 [node name="Flower3" parent="." instance=ExtResource("38_pviwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.629, 1.22528, -12.6187)
-
-[node name="PointsOfInterest" type="Node3D" parent="World"]
-unique_name_in_owner = true
-
-[node name="Marker3D" type="Marker3D" parent="World/PointsOfInterest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.0856, 0, 0)
-
-[node name="Marker3D2" type="Marker3D" parent="World/PointsOfInterest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117416, 0, 0)
-
-[node name="Marker3D5" type="Marker3D" parent="World/PointsOfInterest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7758, 0, 0)
-
-[node name="Marker3D6" type="Marker3D" parent="World/PointsOfInterest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7758, 0, -22.3305)
-
-[node name="Marker3D3" type="Marker3D" parent="World/PointsOfInterest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117416, 0, -25.6902)
-
-[node name="Marker3D4" type="Marker3D" parent="World/PointsOfInterest"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117416, 0, 26.4847)
 
 [connection signal="pressed" from="PauseMenu/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PauseMenu/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
