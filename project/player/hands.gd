@@ -1,108 +1,42 @@
 class_name Hands
-extends TextureRect
+extends Node3D
 
-
-signal started_sniffing
-signal fully_sniffed
-signal stopped_sniffing
-signal completed_sniffing
+signal snatched_snatchable(snatchable: Snatchable)
 
 var held_item: SniffdexEntry
-var is_sniffing := false
-var has_sniffed := false
 
-@onready var hand_texture := texture
-@onready var start_position := position.x
-@onready var sniff_timer := %SniffTimer
-@onready var sniff_noises := %SniffNoises
+@onready var texture_rect := $HandTexture
+@onready var hand_texture :Texture2D= texture_rect.texture
+@onready var start_position :int= texture_rect.position.x
+@onready var snatch_detector := $SnatchDetector
 
 
-func _ready() -> void:
-	sniff_timer.timeout.connect(sniff_complete)
-
-
-func _process(delta):
-	if has_sniffed:
-		_shake(8.0, delta)
-	elif is_sniffing:
-		_shake(1.0, delta)
-
-
-func snatch(snatchable: Snatchable) -> void:
+func snatch() -> void:
 	if held_item:
 		return
-
+	if not snatch_detector.is_colliding():
+		return
+	var body: Node = snatch_detector.get_collider(0)
+	var snatchable := Snatchable.find(body)
+	if not snatchable:
+		return
 	held_item = snatchable.sniffdex_entry
-	texture = held_item.hand_sprite
-
+	texture_rect.texture = held_item.hand_sprite
+	snatched_snatchable.emit(snatchable)
 	snatchable.snatch()
 
 
-func start_sniffing() -> void:
-	if is_sniffing or not held_item:
-		return
-
-	started_sniffing.emit()
-	sniff_timer.start(held_item.sniff_time)
-	is_sniffing = true
-	sniff_noises.stream = held_item.sniff_noise
-	sniff_noises.play()
-
-
-func sniff_complete() -> void:
-	if not is_sniffing:
-		return
-
-	has_sniffed = true
-	fully_sniffed.emit()
-
-
-func stop_sniffing() -> void:
-	if not is_sniffing:
-		return
-
-	is_sniffing = false
-	stopped_sniffing.emit()
-	_reset_position()
-	
-
-	if not has_sniffed:
-		sniff_timer.stop()
-		sniff_noises.stop()
-		return
-
-	sniff(held_item)
-	completed_sniffing.emit()
-	has_sniffed = false
-
-
-func sniff(sniffdex_entry: SniffdexEntry) -> void:
-	if not sniffdex_entry:
-		return
-
-	drop()
-
-
 func drop() -> void:
-	texture = hand_texture
+	texture_rect.texture = hand_texture
 	held_item = null
-	
-	completed_sniffing.emit()
 
 
-func _shake(amount: float, delta: float) -> void:
-	position.x += (randf() * 2.0 - 1.0) * amount * delta * 60.0
+func shake(amount: float, delta: float) -> void:
+	texture_rect.position.x += (randf() * 2.0 - 1.0) * amount * delta * 60.0
 
 
-func _reset_position() -> void:
-	position.x = start_position
-
-
-func _input(event: InputEvent):
-	if event.is_action_pressed("sniff"):
-		start_sniffing()
-	if event.is_action_released("sniff"):
-		stop_sniffing()
+func reset_position() -> void:
+	texture_rect.position.x = start_position
 
 
 static func find(parent: Node) -> Hands:

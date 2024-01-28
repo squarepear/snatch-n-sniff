@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cfmwvldqikic0"]
 
-[ext_resource type="Script" path="res://player/player.gd" id="1_kw388"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_4hlq1"]
 [ext_resource type="Texture2D" uid="uid://dh1ieb114q87q" path="res://player/hands.png" id="2_t8bcn"]
 [ext_resource type="Script" path="res://player/hands.gd" id="2_ula0b"]
 
@@ -12,7 +12,7 @@ size = Vector3(1, 2, 1)
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 2
 collision_mask = 9
-script = ExtResource("1_kw388")
+script = ExtResource("1_4hlq1")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
@@ -22,29 +22,31 @@ current = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_q6qvj")
 
-[node name="SnatchDetector" type="ShapeCast3D" parent="."]
-shape = SubResource("BoxShape3D_jolpg")
-target_position = Vector3(0, 1, -1)
-collision_mask = 4
+[node name="Hands" type="Node3D" parent="."]
+script = ExtResource("2_ula0b")
 
-[node name="Hands" type="TextureRect" parent="."]
+[node name="HandTexture" type="TextureRect" parent="Hands"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = -142.0
+offset_top = -406.0
+offset_right = 142.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("2_t8bcn")
-script = ExtResource("2_ula0b")
 
-[node name="SniffTimer" type="Timer" parent="Hands"]
-unique_name_in_owner = true
+[node name="SnatchDetector" type="ShapeCast3D" parent="Hands"]
+shape = SubResource("BoxShape3D_jolpg")
+target_position = Vector3(0, 1, -1)
+collision_mask = 4
 
 [node name="SniffNoises" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 
-[connection signal="snatched_snatchable" from="." to="Hands" method="snatch"]
-[connection signal="completed_sniffing" from="Hands" to="." method="emit_sniffed"]
-[connection signal="started_sniffing" from="Hands" to="." method="slow_down"]
-[connection signal="stopped_sniffing" from="Hands" to="." method="normal_speed"]
+[node name="SniffTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="snatched_snatchable" from="Hands" to="." method="_on_hands_snatched_snatchable"]
