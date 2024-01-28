@@ -10,10 +10,10 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var chase_target: Node3D
 
 @onready var snatchback_detector = %SnatchbackDetector
+@onready var snatched_alarm: SnatchedAlarm = get_parent().get_node("SnatchedAlarm")
 
 
 func _ready():
-	var snatched_alarm: SnatchedAlarm = get_parent().get_node("SnatchedAlarm")
 	snatched_alarm.activated.connect(chase)
 	snatched_alarm.deactivated.connect(stop_chase)
 
@@ -49,6 +49,7 @@ func _detect_target() -> void:
 		return
 
 	hands.drop()
+	snatched_alarm.deactivate()
 
 
 func chase(node: Node3D) -> void:
