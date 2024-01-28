@@ -9,6 +9,8 @@ extends CharacterBody3D
 
 @export var snatch_attempt_audio: AudioStream
 
+@export var should_move :  bool = true
+
 const SPEED = 1.0
 const POI_STOP_DISTANCE := 2.0
 const POI_STOP_TIME := 4.0
@@ -33,30 +35,31 @@ func _ready():
 
 
 func _physics_process(delta):
-	if not is_on_floor():
-		velocity.y -= gravity * delta
+	if should_move:
+		if not is_on_floor():
+			velocity.y -= gravity * delta
 
 
-	if waiting and not chase_target:
-		return
+		if waiting and not chase_target:
+			return
 
-	look_at(chase_target.global_position if chase_target else current_poi.global_position)
-	rotation.x = 0
-	rotation.z = 0
+		look_at(chase_target.global_position if chase_target else current_poi.global_position)
+		rotation.x = 0
+		rotation.z = 0
 
-	var direction = (transform.basis * Vector3.FORWARD).normalized()
+		var direction = (transform.basis * Vector3.FORWARD).normalized()
 
-	velocity.x = direction.x * SPEED
-	velocity.z = direction.z * SPEED
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
 
-	move_and_slide()
+		move_and_slide()
 
-	if chase_target:
-		_detect_target()
+		if chase_target:
+			_detect_target()
 
-	if global_position.distance_to(current_poi.global_position) <= POI_STOP_DISTANCE:
-		waiting = true
-		get_tree().create_timer(_calculate_stop_time()).timeout.connect(_pick_new_poi)
+		if global_position.distance_to(current_poi.global_position) <= POI_STOP_DISTANCE:
+			waiting = true
+			get_tree().create_timer(_calculate_stop_time()).timeout.connect(_pick_new_poi)
 
 
 func _pick_new_poi() -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=59 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_672hu"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_dja8k"]
@@ -46,6 +46,18 @@
 [ext_resource type="PackedScene" uid="uid://dgdp73gydedaa" path="res://sniffable/garlic/garlic.tscn" id="39_vucid"]
 [ext_resource type="AudioStream" uid="uid://cjynilutg6qh8" path="res://audio/cool_takes.wav" id="42_6qy5v"]
 [ext_resource type="AudioStream" uid="uid://b3lueyw268uht" path="res://audio/cool_snatch_attempt.wav" id="43_pocfh"]
+[ext_resource type="Texture2D" uid="uid://ya3k0hmkp5dq" path="res://people/devs/Sam_Puter.png" id="47_jd14n"]
+[ext_resource type="AudioStream" uid="uid://c103bi1ly4hya" path="res://audio/sam_computer_snatch_attempt.wav" id="48_nuctw"]
+[ext_resource type="Texture2D" uid="uid://i0krdpot3j3x" path="res://people/devs/Sam_Art.png" id="49_s000t"]
+[ext_resource type="AudioStream" uid="uid://r01cj2jlb5us" path="res://audio/sam_art_snatch_attempt.wav" id="50_8kuld"]
+[ext_resource type="Texture2D" uid="uid://ct0domvtkn7m1" path="res://people/devs/Brooke.png" id="51_wimvo"]
+[ext_resource type="AudioStream" uid="uid://d1qc665i7lrkh" path="res://audio/brooke_snatch_attempt.wav" id="52_vsqky"]
+[ext_resource type="Texture2D" uid="uid://bpg8l0xpedg42" path="res://people/devs/Hunter.png" id="53_hh0pc"]
+[ext_resource type="AudioStream" uid="uid://cpwv7cki1u1it" path="res://audio/dev_line_hunter.wav" id="54_xmmpv"]
+[ext_resource type="Texture2D" uid="uid://dqwn8xbw180vw" path="res://people/devs/Jeffery.png" id="55_d0uxx"]
+[ext_resource type="AudioStream" uid="uid://uol84rll0y4l" path="res://audio/jeffrey_snatch_attempt.wav" id="56_abox5"]
+[ext_resource type="Texture2D" uid="uid://qvo41yt2bsiw" path="res://people/devs/Jadi.png" id="57_t2rna"]
+[ext_resource type="AudioStream" uid="uid://xroaf84dl7fq" path="res://audio/jadi_snatch_attempt.wav" id="58_y1my6"]
 
 [node name="Game" type="Node3D"]
 process_mode = 3
@@ -386,6 +398,42 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.5487, 1.24754, 12.3578)
 
 [node name="Flower3" parent="World" instance=ExtResource("38_pviwt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.629, 1.22528, -12.6187)
+
+[node name="Sam_puter" parent="World" instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.618, 0, 21.509)
+sprite_texture = ExtResource("47_jd14n")
+snatch_attempt_audio = ExtResource("48_nuctw")
+should_move = false
+
+[node name="Sam_art" parent="World" instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8345, 0, 28.3866)
+sprite_texture = ExtResource("49_s000t")
+snatch_attempt_audio = ExtResource("50_8kuld")
+should_move = false
+
+[node name="Brooke" parent="World" instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.0728, 0, 14.3296)
+sprite_texture = ExtResource("51_wimvo")
+snatch_attempt_audio = ExtResource("52_vsqky")
+should_move = false
+
+[node name="Hunter" parent="World" instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.866, 0, -15.19)
+sprite_texture = ExtResource("53_hh0pc")
+snatch_attempt_audio = ExtResource("54_xmmpv")
+should_move = false
+
+[node name="Jeffrey" parent="World" instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.364, 0, 5.919)
+sprite_texture = ExtResource("55_d0uxx")
+snatch_attempt_audio = ExtResource("56_abox5")
+should_move = false
+
+[node name="Jadi" parent="World" instance=ExtResource("3_m0ktx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5707, 0, -27.5711)
+sprite_texture = ExtResource("57_t2rna")
+snatch_attempt_audio = ExtResource("58_y1my6")
+should_move = false
 
 [connection signal="pressed" from="PauseMenu/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PauseMenu/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
