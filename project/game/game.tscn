@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=38 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_672hu"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_dja8k"]
@@ -25,13 +25,15 @@
 [ext_resource type="PackedScene" uid="uid://dof8hlw3tknqb" path="res://sniffable/fish/fish.tscn" id="18_1x67r"]
 [ext_resource type="PackedScene" uid="uid://vq560ifaj3ic" path="res://sniffable/evil_penny/evil_penny.tscn" id="19_if7gk"]
 [ext_resource type="PackedScene" uid="uid://6x5ho8xj1gvm" path="res://sniffable/deodorant/deodorant.tscn" id="20_85e3n"]
-[ext_resource type="AudioStream" uid="uid://dvxrho56ospx" path="res://audio/steamboat_willie_takes.wav" id="21_3iahs"]
+[ext_resource type="AudioStream" uid="uid://bkaavofjnolx7" path="res://audio/steamboat_willie_takes.wav" id="21_3iahs"]
 [ext_resource type="PackedScene" uid="uid://sws8ip0qxc3x" path="res://sniffable/rotten_egg/rotten_egg.tscn" id="21_usbll"]
-[ext_resource type="AudioStream" uid="uid://cm14d065s6qrq" path="res://audio/steamboat_willie_snatch_attempt.wav" id="22_15iwo"]
+[ext_resource type="AudioStream" uid="uid://b2xmrmxnd47j6" path="res://audio/steamboat_willie_snatch_attempt.wav" id="22_15iwo"]
 [ext_resource type="PackedScene" uid="uid://e5clwnu35xek" path="res://sniffable/brass_horn/brass_horn.tscn" id="22_gus5u"]
 [ext_resource type="Texture2D" uid="uid://cet8jhwfj7ipi" path="res://people/Mean_Guy.png" id="23_0df2b"]
 [ext_resource type="Texture2D" uid="uid://7ydwxtnbmijv" path="res://people/Normal_Guy.png" id="24_o6gwv"]
+[ext_resource type="AudioStream" uid="uid://dpr5va6vqgr7d" path="res://audio/clown_takes.wav" id="24_sln6y"]
 [ext_resource type="AudioStream" uid="uid://orbaqi3hqt2s" path="res://audio/mean_guy_takes.wav" id="24_ulqxl"]
+[ext_resource type="AudioStream" uid="uid://bdyd46iab35xx" path="res://audio/clown_snatch_attempt.wav" id="25_qjmc1"]
 [ext_resource type="Texture2D" uid="uid://ci8d2rgod6sl0" path="res://people/Gray.png" id="25_thlme"]
 [ext_resource type="PackedScene" uid="uid://bmi5bjrsdensn" path="res://game/end_tracker.tscn" id="32_wcqxp"]
 [ext_resource type="PackedScene" uid="uid://bumj34nleyouw" path="res://sniffable/clipboard/clipboard.tscn" id="34_tpm8u"]
@@ -219,6 +221,8 @@ snatch_attempt_audio = ExtResource("22_15iwo")
 [node name="Clown" parent="World" instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.181, -0.0451487, -19.2528)
 sprite_texture = ExtResource("15_3cd7s")
+taking_audio = ExtResource("24_sln6y")
+snatch_attempt_audio = ExtResource("25_qjmc1")
 
 [node name="Bread" parent="World" instance=ExtResource("17_fy8gt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.0153, 1.29883, -1.00488)
