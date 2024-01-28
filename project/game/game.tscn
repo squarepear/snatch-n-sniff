@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=36 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_672hu"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_dja8k"]
@@ -33,6 +33,7 @@
 [ext_resource type="AudioStream" uid="uid://orbaqi3hqt2s" path="res://audio/mean_guy_takes.wav" id="24_ulqxl"]
 [ext_resource type="Texture2D" uid="uid://ci8d2rgod6sl0" path="res://people/Gray.png" id="25_thlme"]
 [ext_resource type="PackedScene" uid="uid://bmi5bjrsdensn" path="res://game/end_tracker.tscn" id="32_wcqxp"]
+[ext_resource type="PackedScene" uid="uid://bumj34nleyouw" path="res://sniffable/clipboard/clipboard.tscn" id="34_tpm8u"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qw0s4"]
 size = Vector2(128, 128)
@@ -162,7 +163,7 @@ process_mode = 1
 [node name="ConventionCenter" parent="World" instance=ExtResource("4_n1vo4")]
 
 [node name="Player" parent="World" instance=ExtResource("2_dja8k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.81687, 0.0071401, -26.6632)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.81687, 0.0071401, -26.6632)
 
 [node name="SnatchedAlarm" type="Sprite3D" parent="World" node_paths=PackedStringArray("target")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.8, 0)
@@ -268,6 +269,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8571, -0.053484, 16.6424)
 sprite_texture = ExtResource("25_thlme")
 
 [node name="EndTracker" parent="World" instance=ExtResource("32_wcqxp")]
+
+[node name="Clipboard" parent="." instance=ExtResource("34_tpm8u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1606, 1.22528, -27.0462)
 
 [connection signal="pressed" from="PauseMenu/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PauseMenu/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
