@@ -172,16 +172,17 @@ offset_bottom = 1039.0
 [node name="CreditsText" type="Label" parent="CreditsLabel"]
 layout_mode = 0
 offset_left = 1072.0
-offset_top = 279.0
+offset_top = 325.0
 offset_right = 1813.0
-offset_bottom = 756.0
+offset_bottom = 802.0
 theme_override_colors/font_color = Color(1, 0.541176, 0.639216, 1)
 theme_override_font_sizes/font_size = 40
 text = "Reymon Biniam          Joey Current
 Tanner Bauserman   Antonio Sanders
 Victoria Moon             Jack Cullinan
 Camden Hovell           Corbin Trosper
-Paul Gestwicki            Gabriel Frey"
+Paul Gestwicki            Gabriel Frey
+Garrett Tur	                  Isaiah Frey"
 vertical_alignment = 1
 autowrap_mode = 3
 
