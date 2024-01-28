@@ -3,6 +3,10 @@ extends CharacterBody3D
 @export var sprite_texture : CompressedTexture2D:
 	set(value):
 		%Sprite.texture = value
+
+@export var taking_aodio: AudioStream:
+	set(value):
+		%TakingAudioPlayer.stream = value
 const SPEED = 1.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -49,6 +53,7 @@ func _detect_target() -> void:
 		return
 
 	hands.drop()
+	%TakingAudioPlayer.play()
 	snatched_alarm.deactivate()
 
 

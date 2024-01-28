@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=28 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="PackedScene" uid="uid://daqc43oempgnp" path="res://convention/convention_center.tscn" id="1_j4yc8"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_dja8k"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://e5clwnu35xek" path="res://sniffable/brass_horn/brass_horn.tscn" id="22_gus5u"]
 [ext_resource type="Texture2D" uid="uid://cet8jhwfj7ipi" path="res://people/Mean_Guy.png" id="23_0df2b"]
 [ext_resource type="Texture2D" uid="uid://7ydwxtnbmijv" path="res://people/Normal_Guy.png" id="24_o6gwv"]
+[ext_resource type="AudioStream" uid="uid://orbaqi3hqt2s" path="res://audio/mean_guy_takes.wav" id="24_ulqxl"]
 [ext_resource type="Texture2D" uid="uid://ci8d2rgod6sl0" path="res://people/Gray.png" id="25_thlme"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qw0s4"]
@@ -128,6 +129,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3116, -4.76837e-07, 4.8872
 [node name="Mean" parent="." instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4389, -0.053484, 7.11517)
 sprite_texture = ExtResource("23_0df2b")
+taking_aodio = ExtResource("24_ulqxl")
 
 [node name="Snakes" parent="." instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00101, -0.053484, -23.7062)
