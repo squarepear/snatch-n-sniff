@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuvbq3uncq0q1"]
+
+[ext_resource type="Script" path="res://main_menu/victory_screen.gd" id="1_0whyv"]
+[ext_resource type="Texture2D" uid="uid://dh1ieb114q87q" path="res://player/hands.png" id="2_o6hgy"]
+[ext_resource type="Texture2D" uid="uid://bygwlxrirvk1" path="res://main_menu/imp.png" id="3_mnxqf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bur0y"]
+font_size = 128
+outline_size = 24
+outline_color = Color(0, 0, 0, 1)
+
+[node name="VictoryScreen" type="Node2D"]
+script = ExtResource("1_0whyv")
+
+[node name="Background" type="ColorRect" parent="."]
+offset_right = 1915.0
+offset_bottom = 1088.0
+color = Color(0.682353, 0.972549, 0.521569, 1)
+
+[node name="Hands" type="Sprite2D" parent="."]
+position = Vector2(134, 877)
+texture = ExtResource("2_o6hgy")
+
+[node name="VictoryMessage" type="Label" parent="."]
+offset_left = 333.0
+offset_top = 204.0
+offset_right = 1594.0
+offset_bottom = 557.0
+text = "You sniiiiiiifed.
+And it was awesome"
+label_settings = SubResource("LabelSettings_bur0y")
+horizontal_alignment = 1
+
+[node name="Imp" type="Sprite2D" parent="."]
+position = Vector2(586, 787)
+texture = ExtResource("3_mnxqf")
+
+[node name="PlayAgainButton" type="Button" parent="."]
+offset_left = 1027.0
+offset_top = 648.0
+offset_right = 1357.0
+offset_bottom = 739.0
+theme_override_font_sizes/font_size = 60
+text = "Play again?"
+
+[node name="ExitButton" type="Button" parent="."]
+offset_left = 858.0
+offset_top = 832.0
+offset_right = 1568.0
+offset_bottom = 923.0
+theme_override_font_sizes/font_size = 60
+text = "GET ME OUT OF HERE!!!!!"
+
+[connection signal="pressed" from="PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

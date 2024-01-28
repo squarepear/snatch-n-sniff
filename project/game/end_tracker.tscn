@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmi5bjrsdensn"]
+
+[ext_resource type="Script" path="res://game/end_tracker.gd" id="1_jaq57"]
+
+[node name="EndTracker" type="Node2D"]
+script = ExtResource("1_jaq57")
+
+[node name="ObjectsSniffed" type="Label" parent="."]
+unique_name_in_owner = true
+offset_right = 207.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 36
+text = "Objects Sniffed: X/Y"

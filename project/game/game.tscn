@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=34 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_672hu"]
 [ext_resource type="PackedScene" uid="uid://daqc43oempgnp" path="res://convention/convention_center.tscn" id="1_j4yc8"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://7ydwxtnbmijv" path="res://people/Normal_Guy.png" id="24_o6gwv"]
 [ext_resource type="AudioStream" uid="uid://orbaqi3hqt2s" path="res://audio/mean_guy_takes.wav" id="24_ulqxl"]
 [ext_resource type="Texture2D" uid="uid://ci8d2rgod6sl0" path="res://people/Gray.png" id="25_thlme"]
+[ext_resource type="PackedScene" uid="uid://bmi5bjrsdensn" path="res://game/end_tracker.tscn" id="32_wcqxp"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qw0s4"]
 size = Vector2(128, 128)
@@ -269,9 +270,12 @@ sprite_texture = ExtResource("24_o6gwv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8571, -0.053484, 16.6424)
 sprite_texture = ExtResource("25_thlme")
 
+[node name="EndTracker" parent="World" instance=ExtResource("32_wcqxp")]
+
 [connection signal="pressed" from="PauseMenu/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PauseMenu/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
 [connection signal="snatched_snatchable" from="World/Player" to="World/SnatchedAlarm" method="activate" flags=3 unbinds=1]
 [connection signal="sniffed" from="World/Player" to="World/SnatchedAlarm" method="deactivate"]
+[connection signal="sniffed" from="World/Player" to="World/EndTracker" method="_on_player_sniffed"]
 
 [editable path="World/Wizard"]
