@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://hki42ukt5d36"
-path="res://.godot/imported/convention_center.blend-467fb8be6aa549bbe199c424ce373586.scn"
+path="res://.godot/imported/convention_center.blend-13fd85f3ff19f8905befeaff3de81bb8.scn"
 
 [deps]
 
-source_file="res://convention/convention_center.blend"
-dest_files=["res://.godot/imported/convention_center.blend-467fb8be6aa549bbe199c424ce373586.scn"]
+source_file="res://convention/convention_center/convention_center.blend"
+dest_files=["res://.godot/imported/convention_center.blend-13fd85f3ff19f8905befeaff3de81bb8.scn"]
 
 [params]
 
@@ -29,7 +29,22 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"Ceiling": {
+"use_external/enabled": true,
+"use_external/path": "res://convention/convention_center/convention_ceiling_material.tres"
+},
+"Floor": {
+"use_external/enabled": true,
+"use_external/path": "res://convention/convention_center/convention_floor_material.tres"
+},
+"Wall": {
+"use_external/enabled": true,
+"use_external/path": "res://convention/convention_center/convention_wall_material.tres"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
 blender/nodes/visible=0

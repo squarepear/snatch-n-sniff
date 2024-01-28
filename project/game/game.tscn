@@ -1,17 +1,17 @@
 [gd_scene load_steps=36 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_672hu"]
-[ext_resource type="PackedScene" uid="uid://daqc43oempgnp" path="res://convention/convention_center.tscn" id="1_j4yc8"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_dja8k"]
 [ext_resource type="Theme" uid="uid://cn5n7njk5y1gx" path="res://text.theme" id="2_xqlbo"]
-[ext_resource type="PackedScene" uid="uid://biyxmgxkfhwg1" path="res://game/audio_bus_slider.tscn" id="3_hoxnt"]
+[ext_resource type="PackedScene" path="res://game/audio_bus_slider.tscn" id="3_hoxnt"]
 [ext_resource type="PackedScene" uid="uid://cdtujo6st3ima" path="res://people/people.tscn" id="3_m0ktx"]
 [ext_resource type="Texture2D" uid="uid://c7asba44vt71e" path="res://people/wizard/wizard.png" id="4_cfeve"]
+[ext_resource type="PackedScene" uid="uid://c7h2x3iridqsl" path="res://convention/convention_center/convention_center.tscn" id="4_n1vo4"]
 [ext_resource type="Script" path="res://sniffable/snatchable.gd" id="5_lasn3"]
 [ext_resource type="Resource" uid="uid://esxqy0mm4gia" path="res://people/wizard/wizard_sniffdex_entry.tres" id="6_14klo"]
 [ext_resource type="Texture2D" uid="uid://dq1y8whwhrqs" path="res://people/peasant.png" id="7_vssvw"]
 [ext_resource type="Texture2D" uid="uid://dimdpld6m74fr" path="res://people/Steamboat_Willie.png" id="8_cticb"]
-[ext_resource type="AudioStream" uid="uid://dr7heer8o0r3" path="res://audio/wizard_takes.wav" id="8_i7jfc"]
+[ext_resource type="AudioStream" uid="uid://bk3puk6268nse" path="res://audio/wizard_takes.wav" id="8_i7jfc"]
 [ext_resource type="Script" path="res://convention/snatched_alarm.gd" id="8_laknp"]
 [ext_resource type="PackedScene" uid="uid://cvronse8odauh" path="res://sniffable/pizza/pizza.tscn" id="9_dnfsy"]
 [ext_resource type="AudioStream" uid="uid://caqu68u4bciak" path="res://audio/wizard_snatch_attempt.wav" id="9_jinl1"]
@@ -160,7 +160,7 @@ bus_name = "Music"
 [node name="World" type="Node3D" parent="."]
 process_mode = 1
 
-[node name="ConventionCenter" parent="World" instance=ExtResource("1_j4yc8")]
+[node name="ConventionCenter" parent="World" instance=ExtResource("4_n1vo4")]
 
 [node name="Player" parent="World" instance=ExtResource("2_dja8k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.81687, 0.0071401, -26.6632)
