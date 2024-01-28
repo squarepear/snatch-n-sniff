@@ -9,6 +9,7 @@ var held_item: SniffdexEntry
 @onready var hand_texture :Texture2D= texture_rect.texture
 @onready var start_position :int= texture_rect.position.x
 @onready var snatch_detector := $SnatchDetector
+@onready var snatch_attempt_player : AudioStreamPlayer = %PersonSnatchAttemptPlayer
 
 
 func snatch() -> void:
@@ -18,6 +19,10 @@ func snatch() -> void:
 		return
 	var body: Node = snatch_detector.get_collider(0)
 	var snatchable := Snatchable.find(body)
+	print(body)
+	if body is Person:
+		snatch_attempt_player.stream = body.get_snatch_attempt_audio()
+		snatch_attempt_player.play()
 	if not snatchable:
 		return
 	held_item = snatchable.sniffdex_entry

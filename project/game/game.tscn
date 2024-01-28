@@ -1,17 +1,19 @@
-[gd_scene load_steps=29 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=32 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_672hu"]
 [ext_resource type="PackedScene" uid="uid://daqc43oempgnp" path="res://convention/convention_center.tscn" id="1_j4yc8"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_dja8k"]
-[ext_resource type="Theme" uid="uid://cn5n7njk5y1gx" path="res://text.theme" id="2_xqlbo"]
+[ext_resource type="Theme" path="res://text.theme" id="2_xqlbo"]
 [ext_resource type="PackedScene" uid="uid://cdtujo6st3ima" path="res://people/people.tscn" id="3_m0ktx"]
 [ext_resource type="Texture2D" uid="uid://c7asba44vt71e" path="res://people/wizard/wizard.png" id="4_cfeve"]
 [ext_resource type="Script" path="res://sniffable/snatchable.gd" id="5_lasn3"]
 [ext_resource type="Resource" uid="uid://esxqy0mm4gia" path="res://people/wizard/wizard_sniffdex_entry.tres" id="6_14klo"]
 [ext_resource type="Texture2D" uid="uid://dq1y8whwhrqs" path="res://people/peasant.png" id="7_vssvw"]
 [ext_resource type="Texture2D" uid="uid://dimdpld6m74fr" path="res://people/Steamboat_Willie.png" id="8_cticb"]
+[ext_resource type="AudioStream" uid="uid://dr7heer8o0r3" path="res://audio/wizard_takes.wav" id="8_i7jfc"]
 [ext_resource type="Script" path="res://convention/snatched_alarm.gd" id="8_laknp"]
 [ext_resource type="PackedScene" uid="uid://cvronse8odauh" path="res://sniffable/pizza/pizza.tscn" id="9_dnfsy"]
+[ext_resource type="AudioStream" uid="uid://caqu68u4bciak" path="res://audio/wizard_snatch_attempt.wav" id="9_jinl1"]
 [ext_resource type="PackedScene" uid="uid://b56rso8jsl55m" path="res://sniffable/skunk/skunk.tscn" id="10_um7we"]
 [ext_resource type="PackedScene" uid="uid://860f1kn82pfk" path="res://convention/table/table.blend" id="11_ly1tf"]
 [ext_resource type="PackedScene" uid="uid://dm1cpeefjn3n4" path="res://sniffable/orange/orange.tscn" id="12_bs1ww"]
@@ -125,6 +127,8 @@ target = NodePath("../Player")
 [node name="Wizard" parent="World" instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -2)
 sprite_texture = ExtResource("4_cfeve")
+taking_audio = ExtResource("8_i7jfc")
+snatch_attempt_audio = ExtResource("9_jinl1")
 
 [node name="Snatchable" type="Node" parent="World/Wizard" node_paths=PackedStringArray("sprite3d")]
 script = ExtResource("5_lasn3")
@@ -206,7 +210,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.3116, -4.76837e-07, 4.8872
 [node name="Mean" parent="World" instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4389, -0.053484, 7.11517)
 sprite_texture = ExtResource("23_0df2b")
-taking_aodio = ExtResource("24_ulqxl")
+taking_audio = ExtResource("24_ulqxl")
 
 [node name="Snakes" parent="World" instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00101, -0.053484, -23.7062)

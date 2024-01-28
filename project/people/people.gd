@@ -1,12 +1,16 @@
+class_name Person
 extends CharacterBody3D
 
 @export var sprite_texture : CompressedTexture2D:
 	set(value):
 		%Sprite.texture = value
 
-@export var taking_aodio: AudioStream:
+@export var taking_audio: AudioStream:
 	set(value):
 		%TakingAudioPlayer.stream = value
+
+@export var snatch_attempt_audio: AudioStream
+
 const SPEED = 1.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -41,6 +45,9 @@ func _physics_process(delta):
 	if chase_target:
 		_detect_target()
 
+func get_snatch_attempt_audio() -> AudioStream:
+	return snatch_attempt_audio
+
 
 func _detect_target() -> void:
 	if not snatchback_detector.is_colliding():
@@ -54,6 +61,9 @@ func _detect_target() -> void:
 
 	hands.drop()
 	%TakingAudioPlayer.play()
+	if  hands.snatch_attempt_player.playing:
+		# Stop the Wizard from talking
+		hands.snatch_attempt_player.stop()
 	snatched_alarm.deactivate()
 
 

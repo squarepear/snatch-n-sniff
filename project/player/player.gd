@@ -69,6 +69,8 @@ func sniff_complete() -> void:
 	if not is_sniffing:
 		return
 	has_sniffed = true
+	# Shut up the Wizard
+	hands.snatch_attempt_player.stop()
 
 
 func stop_sniffing() -> void:
@@ -82,6 +84,7 @@ func stop_sniffing() -> void:
 		return
 	hands.drop()
 	has_sniffed = false
+	
 
 
 func get_speed() -> float:
@@ -101,3 +104,4 @@ func _input(event: InputEvent):
 
 func _on_hands_snatched_snatchable(snatchable:Snatchable):
 	snatched_snatchable.emit(snatchable)
+
