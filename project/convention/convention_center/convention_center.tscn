@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c7h2x3iridqsl"]
+[gd_scene load_steps=18 format=3 uid="uid://c7h2x3iridqsl"]
 
 [ext_resource type="PackedScene" uid="uid://hki42ukt5d36" path="res://convention/convention_center/convention_center.blend" id="1_m2wtr"]
 [ext_resource type="PackedScene" uid="uid://lnwogpjkn7xi" path="res://convention/light/convention_light.tscn" id="2_rp404"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ce8yb1imqpjw8" path="res://main_menu/Title_Banner.png" id="9_lmx5c"]
 [ext_resource type="Texture2D" uid="uid://co5nb1o3wbr6u" path="res://convention/booth/Banner_Blue.png" id="10_j1mur"]
 [ext_resource type="Texture2D" uid="uid://cm3qrp3cldk1e" path="res://convention/booth/Banner_Red.png" id="11_nljl3"]
+[ext_resource type="Texture2D" uid="uid://d1o2b70l12ac6" path="res://convention/booth/Food_Stand.png" id="12_5jk10"]
 [ext_resource type="PackedScene" uid="uid://chyskkvnuph5e" path="res://convention/speakers/speaker.blend" id="12_a7six"]
 [ext_resource type="PackedScene" uid="uid://860f1kn82pfk" path="res://convention/table/table.blend" id="12_boayo"]
 [ext_resource type="PackedScene" uid="uid://bsmce5alcgsn3" path="res://convention/speakers/main_speaker.tscn" id="13_4hiyt"]
@@ -218,6 +219,11 @@ transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 20.6418,
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
 pixel_size = 0.002
 texture = ExtResource("6_nl1g2")
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 31.9877, 3.34926, 0)
+pixel_size = 0.005
+texture = ExtResource("12_5jk10")
 
 [node name="Tables" type="Node3D" parent="."]
 
