@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="SniffdexEntry" load_steps=5 format=3 uid="uid://b4t5o78v2qjid"]
 
 [ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_1pko3"]
-[ext_resource type="Texture2D" uid="uid://egnbtjdfdsl6" path="res://sniffable/bread/Bread_Hand.png" id="1_l2quo"]
+[ext_resource type="Texture2D" uid="uid://benklxistt2kq" path="res://sniffable/clipboard/Board_Hand.png" id="1_k5uji"]
 [ext_resource type="AudioStream" uid="uid://bu5e2styjoe6d" path="res://audio/brass_horn_sniff.wav" id="3_s5e75"]
 [ext_resource type="Texture2D" uid="uid://bo602jjp5nmka" path="res://sniffable/clipboard/clipboard.png" id="4_tiksg"]
 
@@ -9,6 +9,6 @@
 script = ExtResource("1_1pko3")
 name = ""
 sprite = ExtResource("4_tiksg")
-hand_sprite = ExtResource("1_l2quo")
+hand_sprite = ExtResource("1_k5uji")
 sniff_time = 2.0
 sniff_noise = ExtResource("3_s5e75")
