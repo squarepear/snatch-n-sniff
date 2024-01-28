@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://c0u7xsue61tia"]
+[gd_scene load_steps=30 format=3 uid="uid://c0u7xsue61tia"]
 
 [ext_resource type="Script" path="res://game/game.gd" id="1_672hu"]
 [ext_resource type="PackedScene" uid="uid://daqc43oempgnp" path="res://convention/convention_center.tscn" id="1_j4yc8"]
