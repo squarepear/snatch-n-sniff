@@ -418,7 +418,7 @@ snatch_attempt_audio = ExtResource("52_vsqky")
 should_move = false
 
 [node name="Hunter" parent="World" instance=ExtResource("3_m0ktx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.866, 0, -15.19)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8559, 0, -15.19)
 sprite_texture = ExtResource("53_hh0pc")
 snatch_attempt_audio = ExtResource("54_xmmpv")
 should_move = false

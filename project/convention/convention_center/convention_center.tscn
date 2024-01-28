@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://c7h2x3iridqsl"]
+[gd_scene load_steps=25 format=3 uid="uid://c7h2x3iridqsl"]
 
 [ext_resource type="PackedScene" uid="uid://hki42ukt5d36" path="res://convention/convention_center/convention_center.blend" id="1_m2wtr"]
 [ext_resource type="PackedScene" uid="uid://lnwogpjkn7xi" path="res://convention/light/convention_light.tscn" id="2_rp404"]
 [ext_resource type="Texture2D" uid="uid://bwmgbyy7lnofe" path="res://convention/posters/Wizard_Poster.png" id="3_6hs6n"]
 [ext_resource type="PackedScene" uid="uid://bu12kkk7833ot" path="res://convention/booth/booth.blend" id="3_oqvtn"]
+[ext_resource type="Texture2D" uid="uid://dyowgjighcey7" path="res://convention/convention_center/Karaoke_Sign.png" id="3_pauqk"]
 [ext_resource type="Texture2D" uid="uid://fim57gl1cvhf" path="res://convention/posters/Jam_Poster.png" id="4_qhg2x"]
 [ext_resource type="Texture2D" uid="uid://tmgp55os141h" path="res://convention/booth/Banner_Yellow.png" id="4_rfsnn"]
 [ext_resource type="Texture2D" uid="uid://b3es51mmrf55x" path="res://convention/booth/skunks_banner.png" id="5_2rfp6"]
@@ -113,6 +114,14 @@ transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -29.6267, 5.5, -18.844)
 
 [node name="Posters" type="Node3D" parent="."]
+
+[node name="Karaoke" type="Sprite3D" parent="Posters"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2859, 4.44728, -15.9998)
+texture = ExtResource("3_pauqk")
+
+[node name="Karaoke" type="Sprite3D" parent="Posters/Karaoke"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.17036, -0.0254397, 0.0908661)
+texture = ExtResource("3_pauqk")
 
 [node name="WizardPoster" type="Sprite3D" parent="Posters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.37989, 2.94881, -31.9953)
