@@ -1,17 +1,88 @@
-[gd_scene load_steps=3 format=3 uid="uid://daqc43oempgnp"]
+[gd_scene load_steps=4 format=3 uid="uid://daqc43oempgnp"]
 
 [ext_resource type="PackedScene" uid="uid://hki42ukt5d36" path="res://convention/convention_center.blend" id="1_qh047"]
+[ext_resource type="PackedScene" uid="uid://lnwogpjkn7xi" path="res://convention/light/convention_light.tscn" id="2_fpypp"]
 
 [sub_resource type="Environment" id="Environment_hswp2"]
-background_mode = 1
-background_color = Color(1, 0.541176, 0.639216, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.901961, 0.458824, 0.627451, 1)
+ambient_light_energy = 0.6
+reflected_light_source = 1
+ssr_enabled = true
+ssr_fade_in = 0.713523
+ssao_enabled = true
 
 [node name="ConventionCenter" type="Node3D"]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 3.36777, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_hswp2")
 
 [node name="ConventionCenter" parent="." instance=ExtResource("1_qh047")]
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="SpotLight3D" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 6, 0)
+
+[node name="SpotLight3D2" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 6, -14)
+
+[node name="SpotLight3D3" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 6, 14)
+
+[node name="SpotLight3D4" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 14, 6, 0)
+
+[node name="SpotLight3D5" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 14, 6, -14)
+
+[node name="SpotLight3D6" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 14, 6, 14)
+
+[node name="SpotLight3D7" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -14, 6, 0)
+
+[node name="SpotLight3D8" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -14, 6, -14)
+
+[node name="SpotLight3D9" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -14, 6, 14)
+
+[node name="SpotLight3D10" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 6, 28)
+
+[node name="SpotLight3D11" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 14, 6, 28)
+
+[node name="SpotLight3D12" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -14, 6, 28)
+
+[node name="SpotLight3D13" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 6, -28)
+
+[node name="SpotLight3D14" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 14, 6, -28)
+
+[node name="SpotLight3D15" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -14, 6, -28)
+
+[node name="SpotLight3D16" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -28, 6, 0)
+
+[node name="SpotLight3D17" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -28, 6, -14)
+
+[node name="SpotLight3D18" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -28, 6, 14)
+
+[node name="SpotLight3D19" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 28, 6, 0)
+
+[node name="SpotLight3D20" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -22.5587, 5.5, -25.9223)
+
+[node name="SpotLight3D21" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 28, 6, 14)
+
+[node name="SpotLight3D22" parent="Lights" instance=ExtResource("2_fpypp")]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -29.6267, 5.5, -18.844)

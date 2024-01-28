@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://sniffable/sniffdex_entry.gd" id="1_8q1gw"]
 [ext_resource type="Texture2D" uid="uid://c1psk02jckpka" path="res://sniffable/orange/Orange_Hand.png" id="1_tpd1g"]
-[ext_resource type="AudioStream" uid="uid://qa82v7ukshff" path="res://audio/orange_sniff.wav" id="2_4qmar"]
+[ext_resource type="AudioStream" uid="uid://cjervu5wpjxux" path="res://audio/orange_sniff.wav" id="2_4qmar"]
 [ext_resource type="Texture2D" uid="uid://b8i7qc6moowmc" path="res://sniffable/orange/Orange.png" id="2_q4u1e"]
 
 [resource]
