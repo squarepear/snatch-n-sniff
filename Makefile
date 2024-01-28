@@ -5,15 +5,15 @@ clean:
 
 linux:
 	mkdir -p build/linux
-	'/Applications/Godot 4.2.1.app/Contents/MacOS/Godot' -v --export-release "Linux/X11" ../build/linux/SnatchNSniff.x86_64 project/project.godot
+	godot -v --export-release "Linux/X11" ../build/linux/SnatchNSniff.x86_64 project/project.godot
 
 macos:
 	mkdir -p build/macos
-	'/Applications/Godot 4.2.1.app/Contents/MacOS/Godot' -v --export-release "macOS" ../build/macos/SnatchNSniff.dmg project/project.godot
+	godot -v --export-release "macOS" ../build/macos/SnatchNSniff.dmg project/project.godot
 
 windows:
 	mkdir -p build/windows
-	'/Applications/Godot 4.2.1.app/Contents/MacOS/Godot' -v --export-release "Windows Desktop" ../build/windows/SnatchNSniff.exe project/project.godot
+	godot -v --export-release "Windows Desktop" ../build/windows/SnatchNSniff.exe project/project.godot
 
 zip: linux macos windows
 	mkdir -p build/zip
