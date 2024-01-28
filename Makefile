@@ -15,7 +15,7 @@ windows:
 	mkdir -p build/windows
 	'/Applications/Godot 4.2.1.app/Contents/MacOS/Godot' -v --export-release "Windows Desktop" ../build/windows/SnatchNSniff.exe project/project.godot
 
-zip: linux windows
+zip: linux macos windows
 	mkdir -p build/zip
 	mkdir -p build/zip/src
 	rsync -av --progress project build/zip/src --exclude .godot/
