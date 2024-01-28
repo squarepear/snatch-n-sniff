@@ -5,6 +5,7 @@ signal snatched_snatchable(snatchable: Snatchable)
 signal item_dropped
 
 var held_item: SniffdexEntry
+var has_played_alarm := false
 
 @onready var texture_rect := $HandTexture
 @onready var hand_texture :Texture2D= texture_rect.texture
@@ -27,7 +28,9 @@ func snatch() -> void:
 		return
 	held_item = snatchable.sniffdex_entry
 	texture_rect.texture = held_item.hand_sprite
-	snatched_alarm.play()
+	if not has_played_alarm:
+		snatched_alarm.play()
+		has_played_alarm = true
 	snatched_snatchable.emit(snatchable)
 	snatchable.snatch()
 
