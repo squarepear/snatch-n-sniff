@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bo602jjp5nmka"
-path.s3tc="res://.godot/imported/clipboard.png-7cfc1c0d0e947ff3faf9b8d29c885a7e.s3tc.ctex"
+path.s3tc="res://.godot/imported/clipboard.png-20ef6ef45230aca0c7e358fa61312aaf.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://convention/clipboard.png"
-dest_files=["res://.godot/imported/clipboard.png-7cfc1c0d0e947ff3faf9b8d29c885a7e.s3tc.ctex"]
+source_file="res://sniffable/clipboard/clipboard.png"
+dest_files=["res://.godot/imported/clipboard.png-20ef6ef45230aca0c7e358fa61312aaf.s3tc.ctex"]
 
 [params]
 
