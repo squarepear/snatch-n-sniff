@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://game/game.gd" id="1_672hu"]
 [ext_resource type="PackedScene" uid="uid://cfmwvldqikic0" path="res://player/player.tscn" id="2_dja8k"]
 [ext_resource type="Theme" uid="uid://cn5n7njk5y1gx" path="res://text.theme" id="2_xqlbo"]
-[ext_resource type="PackedScene" uid="uid://biyxmgxkfhwg1" path="res://game/audio_bus_slider.tscn" id="3_hoxnt"]
+[ext_resource type="PackedScene" path="res://game/audio_bus_slider.tscn" id="3_hoxnt"]
 [ext_resource type="PackedScene" uid="uid://cdtujo6st3ima" path="res://people/people.tscn" id="3_m0ktx"]
 [ext_resource type="Texture2D" uid="uid://c7asba44vt71e" path="res://people/wizard/wizard.png" id="4_cfeve"]
 [ext_resource type="PackedScene" uid="uid://c7h2x3iridqsl" path="res://convention/convention_center/convention_center.tscn" id="4_n1vo4"]
@@ -12,7 +12,7 @@
 [ext_resource type="SpriteFrames" uid="uid://fmdjairnwcso" path="res://convention/alarm/alarm_off_animation.tres" id="6_lojj0"]
 [ext_resource type="Texture2D" uid="uid://dq1y8whwhrqs" path="res://people/peasant.png" id="7_vssvw"]
 [ext_resource type="Texture2D" uid="uid://dimdpld6m74fr" path="res://people/Steamboat_Willie.png" id="8_cticb"]
-[ext_resource type="AudioStream" uid="uid://dr7heer8o0r3" path="res://audio/wizard_takes.wav" id="8_i7jfc"]
+[ext_resource type="AudioStream" uid="uid://bk3puk6268nse" path="res://audio/wizard_takes.wav" id="8_i7jfc"]
 [ext_resource type="Script" path="res://convention/alarm/snatched_alarm.gd" id="8_laknp"]
 [ext_resource type="PackedScene" uid="uid://cvronse8odauh" path="res://sniffable/pizza/pizza.tscn" id="9_dnfsy"]
 [ext_resource type="AudioStream" uid="uid://caqu68u4bciak" path="res://audio/wizard_snatch_attempt.wav" id="9_jinl1"]
@@ -273,6 +273,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8571, -0.053484, 16.6424)
 sprite_texture = ExtResource("25_thlme")
 
 [node name="EndTracker" parent="World" instance=ExtResource("32_wcqxp")]
+
+[node name="PointsOfInterest" type="Node3D" parent="World"]
+unique_name_in_owner = true
+
+[node name="Marker3D" type="Marker3D" parent="World/PointsOfInterest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.0856, 0, 0)
+
+[node name="Marker3D2" type="Marker3D" parent="World/PointsOfInterest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117416, 0, 0)
+
+[node name="Marker3D5" type="Marker3D" parent="World/PointsOfInterest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7758, 0, 0)
+
+[node name="Marker3D6" type="Marker3D" parent="World/PointsOfInterest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7758, 0, -22.3305)
+
+[node name="Marker3D3" type="Marker3D" parent="World/PointsOfInterest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117416, 0, -25.6902)
+
+[node name="Marker3D4" type="Marker3D" parent="World/PointsOfInterest"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0117416, 0, 26.4847)
 
 [connection signal="pressed" from="PauseMenu/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="PauseMenu/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
