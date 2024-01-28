@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Godot Template"
+config/name="Snatch n' Sniff"
 run/main_scene="res://game/game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
