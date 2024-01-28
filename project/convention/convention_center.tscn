@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cjhwys4ndhfj1" path="res://convention/booth/artist_alley_banner.png" id="7_up1gx"]
 [ext_resource type="Texture2D" uid="uid://co5nb1o3wbr6u" path="res://convention/booth/Banner_Blue.png" id="10_cve3y"]
 [ext_resource type="Texture2D" uid="uid://cm3qrp3cldk1e" path="res://convention/booth/Banner_Red.png" id="11_kf4r0"]
+[ext_resource type="PackedScene" uid="uid://chyskkvnuph5e" path="res://convention/speakers/speaker.blend" id="5_ef8cn"]
 
 [sub_resource type="Environment" id="Environment_hswp2"]
 ambient_light_source = 2
@@ -209,3 +210,32 @@ transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 20.6418,
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
 pixel_size = 0.002
 texture = ExtResource("6_bjldg")
+
+[node name="Speakers" type="Node3D" parent="."]
+
+[node name="Speaker" parent="Speakers" instance=ExtResource("5_ef8cn")]
+transform = Transform3D(0.836955, 0, -0.547271, 0, 1, 0, 0.547271, 0, 0.836955, -29.1131, 5.96046e-07, -25.3849)
+
+[node name="Speaker2" parent="Speakers" instance=ExtResource("5_ef8cn")]
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -23.1733, 5.96046e-07, -25.1157)
+
+[node name="Speaker3" parent="Speakers" instance=ExtResource("5_ef8cn")]
+transform = Transform3D(0.126891, 0, -0.991917, 0, 1, 0, 0.991917, 0, 0.126891, -27.32, 5.96046e-07, -26.8883)
+
+[node name="Speaker4" parent="Speakers" instance=ExtResource("5_ef8cn")]
+transform = Transform3D(-0.991917, 0, -0.126891, 0.0468745, 0.929268, -0.36642, 0.117916, -0.369406, -0.921756, -22.7348, 0.207058, -23.229)
+
+[node name="Speaker5" parent="Speakers" instance=ExtResource("5_ef8cn")]
+transform = Transform3D(0.997837, 0, -0.0657341, 0, 1, 0, 0.0657341, 0, 0.997837, -29.3531, 5.96046e-07, -23.2057)
+
+[node name="Speaker6" parent="Speakers" instance=ExtResource("5_ef8cn")]
+transform = Transform3D(-0.0657341, 0, -0.997837, 0, 1, 0, 0.997837, 0, -0.0657341, -24.9943, 5.96046e-07, -27.0257)
+
+[node name="Speaker7" parent="Speakers" instance=ExtResource("5_ef8cn")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -29.3304, 2.51442, -25.1157)
+
+[node name="Speaker8" parent="Speakers" instance=ExtResource("5_ef8cn")]
+transform = Transform3D(0.737902, -0.674908, 2.95012e-08, 1.39135e-15, -4.37114e-08, -1, 0.674908, 0.737902, -3.22547e-08, -27.6734, 2.50416, -26.8999)
+
+[node name="Speaker9" parent="Speakers" instance=ExtResource("5_ef8cn")]
+transform = Transform3D(-0.958002, -0.28675, 0.00241463, 0.0318049, -0.114618, -0.992901, 0.284991, -0.951124, 0.118924, -22.6186, 2.72847, -23.6579)
