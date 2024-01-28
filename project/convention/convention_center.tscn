@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://daqc43oempgnp"]
+[gd_scene load_steps=16 format=3 uid="uid://daqc43oempgnp"]
 
 [ext_resource type="PackedScene" uid="uid://hki42ukt5d36" path="res://convention/convention_center.blend" id="1_qh047"]
 [ext_resource type="PackedScene" uid="uid://lnwogpjkn7xi" path="res://convention/light/convention_light.tscn" id="2_fpypp"]
@@ -7,11 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://tmgp55os141h" path="res://convention/booth/Banner_Yellow.png" id="4_fus63"]
 [ext_resource type="Texture2D" uid="uid://b8sp17cw308nu" path="res://convention/booth/how_to_play_banner.png" id="4_wjort"]
 [ext_resource type="Texture2D" uid="uid://b3es51mmrf55x" path="res://convention/booth/skunks_banner.png" id="5_742v6"]
+[ext_resource type="PackedScene" uid="uid://chyskkvnuph5e" path="res://convention/speakers/speaker.blend" id="5_ef8cn"]
 [ext_resource type="Texture2D" uid="uid://ckpvd3gvl4xtm" path="res://convention/booth/snakes_banner.png" id="6_bjldg"]
 [ext_resource type="Texture2D" uid="uid://cjhwys4ndhfj1" path="res://convention/booth/artist_alley_banner.png" id="7_up1gx"]
 [ext_resource type="Texture2D" uid="uid://co5nb1o3wbr6u" path="res://convention/booth/Banner_Blue.png" id="10_cve3y"]
 [ext_resource type="Texture2D" uid="uid://cm3qrp3cldk1e" path="res://convention/booth/Banner_Red.png" id="11_kf4r0"]
-[ext_resource type="PackedScene" uid="uid://chyskkvnuph5e" path="res://convention/speakers/speaker.blend" id="5_ef8cn"]
+[ext_resource type="PackedScene" uid="uid://bsmce5alcgsn3" path="res://convention/speakers/main_speaker.tscn" id="13_q35pm"]
 
 [sub_resource type="Environment" id="Environment_hswp2"]
 ambient_light_source = 2
@@ -21,6 +22,9 @@ reflected_light_source = 1
 ssr_enabled = true
 ssr_fade_in = 0.713523
 ssao_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_01s6y"]
+size = Vector3(12, 5.77728, 18.8028)
 
 [node name="ConventionCenter" type="Node3D"]
 
@@ -239,3 +243,25 @@ transform = Transform3D(0.737902, -0.674908, 2.95012e-08, 1.39135e-15, -4.37114e
 
 [node name="Speaker9" parent="Speakers" instance=ExtResource("5_ef8cn")]
 transform = Transform3D(-0.958002, -0.28675, 0.00241463, 0.0318049, -0.114618, -0.992901, 0.284991, -0.951124, 0.118924, -22.6186, 2.72847, -23.6579)
+
+[node name="AudioSources" type="Node3D" parent="."]
+
+[node name="MainSpeaker" parent="AudioSources" node_paths=PackedStringArray("activation_area") instance=ExtResource("13_q35pm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.6368, 1.52292, -23.9164)
+activation_area = NodePath("../../Area3D")
+
+[node name="MainSpeaker2" parent="AudioSources" node_paths=PackedStringArray("activation_area") instance=ExtResource("13_q35pm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.4058, 1.52292, -24.0827)
+activation_area = NodePath("../../Area3D")
+
+[node name="MainSpeaker3" parent="AudioSources" node_paths=PackedStringArray("activation_area") instance=ExtResource("13_q35pm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1117, 1.52292, -27.0475)
+activation_area = NodePath("../../Area3D")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.7132, 2.88565, -19.1234)
+shape = SubResource("BoxShape3D_01s6y")
