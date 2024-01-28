@@ -1,5 +1,5 @@
 class_name SnatchedAlarm
-extends Sprite3D
+extends AnimatedSprite3D
 
 
 signal activated(target: Node3D)
@@ -7,9 +7,12 @@ signal deactivated
 
 const ROTATION_SPEED := 8.0
 
+@export var target: Node3D
+
 var active := false
 
-@export var target: Node3D
+@onready var off_animation := preload("res://convention/alarm/alarm_off_animation.tres")
+@onready var on_animation := preload("res://convention/alarm/alarm_on_animation.tres")
 
 
 func _process(delta):
@@ -23,9 +26,13 @@ func activate() -> void:
 	active = true
 	billboard = BaseMaterial3D.BILLBOARD_DISABLED
 	activated.emit(target)
+	sprite_frames = on_animation
+	play()
 
 
 func deactivate() -> void:
 	active = false
 	billboard = BaseMaterial3D.BILLBOARD_FIXED_Y
 	deactivated.emit()
+	sprite_frames = off_animation
+	stop()

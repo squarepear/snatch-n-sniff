@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c7h2x3iridqsl" path="res://convention/convention_center/convention_center.tscn" id="4_n1vo4"]
 [ext_resource type="Script" path="res://sniffable/snatchable.gd" id="5_lasn3"]
 [ext_resource type="Resource" uid="uid://esxqy0mm4gia" path="res://people/wizard/wizard_sniffdex_entry.tres" id="6_14klo"]
+[ext_resource type="SpriteFrames" uid="uid://fmdjairnwcso" path="res://convention/alarm/alarm_off_animation.tres" id="6_lojj0"]
 [ext_resource type="Texture2D" uid="uid://dq1y8whwhrqs" path="res://people/peasant.png" id="7_vssvw"]
 [ext_resource type="Texture2D" uid="uid://dimdpld6m74fr" path="res://people/Steamboat_Willie.png" id="8_cticb"]
 [ext_resource type="AudioStream" uid="uid://dr7heer8o0r3" path="res://audio/wizard_takes.wav" id="8_i7jfc"]
@@ -34,9 +35,6 @@
 [ext_resource type="Texture2D" uid="uid://ci8d2rgod6sl0" path="res://people/Gray.png" id="25_thlme"]
 [ext_resource type="PackedScene" uid="uid://bmi5bjrsdensn" path="res://game/end_tracker.tscn" id="32_wcqxp"]
 [ext_resource type="PackedScene" uid="uid://bumj34nleyouw" path="res://sniffable/clipboard/clipboard.tscn" id="34_tpm8u"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qw0s4"]
-size = Vector2(128, 128)
 
 [node name="Game" type="Node3D"]
 process_mode = 3
@@ -165,11 +163,11 @@ process_mode = 1
 [node name="Player" parent="World" instance=ExtResource("2_dja8k")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.81687, 0.0071401, -26.6632)
 
-[node name="SnatchedAlarm" type="Sprite3D" parent="World" node_paths=PackedStringArray("target")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.8, 0)
+[node name="SnatchedAlarm" type="AnimatedSprite3D" parent="World" node_paths=PackedStringArray("target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.34137, 0)
 pixel_size = 0.0025
 billboard = 2
-texture = SubResource("PlaceholderTexture2D_qw0s4")
+sprite_frames = ExtResource("6_lojj0")
 script = ExtResource("8_laknp")
 target = NodePath("../Player")
 
@@ -277,7 +275,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1606, 1.22528, -27.0462)
 [connection signal="pressed" from="PauseMenu/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
 [connection signal="item_dropped" from="World/Player" to="World/EndTracker" method="_on_player_item_dropped"]
 [connection signal="snatched_snatchable" from="World/Player" to="World/SnatchedAlarm" method="activate" flags=3 unbinds=1]
-[connection signal="sniffed" from="World/Player" to="World/SnatchedAlarm" method="deactivate"]
 [connection signal="sniffed" from="World/Player" to="World/EndTracker" method="_on_player_sniffed"]
+[connection signal="sniffed" from="World/Player" to="World/SnatchedAlarm" method="deactivate" flags=3]
 
 [editable path="World/Wizard"]

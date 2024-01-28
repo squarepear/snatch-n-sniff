@@ -1,0 +1,34 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://dkf7twfvxtwwa"]
+
+[ext_resource type="Texture2D" uid="uid://bbb64p1w2v8l3" path="res://convention/alarm/alarm_on_1.png" id="1_pjhkj"]
+[ext_resource type="Texture2D" uid="uid://b1r1apd3n5ht4" path="res://convention/alarm/alarm_on_2.png" id="2_hrhjb"]
+[ext_resource type="Texture2D" uid="uid://ck11yxhwsp8v2" path="res://convention/alarm/alarm_on_3.png" id="3_pgdgs"]
+[ext_resource type="Texture2D" uid="uid://css5gfjlavif5" path="res://convention/alarm/alarm_on_4.png" id="4_m8b62"]
+[ext_resource type="Texture2D" uid="uid://brajo2ifscxl3" path="res://convention/alarm/alarm_on_5.png" id="5_qwf75"]
+[ext_resource type="Texture2D" uid="uid://c3d26ugjdb4aa" path="res://convention/alarm/alarm_on_6.png" id="6_vk0qd"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pjhkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hrhjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pgdgs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_m8b62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qwf75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vk0qd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
