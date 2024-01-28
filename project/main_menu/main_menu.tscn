@@ -205,6 +205,7 @@ theme_override_colors/font_color = Color(1, 0.541176, 0.639216, 1)
 theme_override_font_sizes/font_size = 48
 text = "This game was made for Global Game Jam 2024!
 The theme is: Make Me Laugh
+Diversifiers Used: Mouthing Off, Full Steam Ahead
 
   Our team:                                                       Our bonus sniffers:
 "
