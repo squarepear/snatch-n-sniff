@@ -67,7 +67,7 @@ func sniff_complete() -> void:
 		return
 	has_sniffed = true
 	# Shut up the Wizard
-	hands.snatch_attempt_player.stop()
+	Sfx.stop()
 
 
 func stop_sniffing() -> void:

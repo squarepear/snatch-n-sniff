@@ -43,9 +43,6 @@ shape = SubResource("BoxShape3D_jolpg")
 target_position = Vector3(0, 1, -1)
 collision_mask = 4
 
-[node name="PersonSnatchAttemptPlayer" type="AudioStreamPlayer" parent="Hands"]
-unique_name_in_owner = true
-
 [node name="SniffNoises" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 

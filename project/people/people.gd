@@ -5,9 +5,7 @@ extends CharacterBody3D
 	set(value):
 		%Sprite.texture = value
 
-@export var taking_audio: AudioStream:
-	set(value):
-		%TakingAudioPlayer.stream = value
+@export var taking_audio: AudioStream
 
 @export var snatch_attempt_audio: AudioStream
 
@@ -60,10 +58,10 @@ func _detect_target() -> void:
 		return
 
 	hands.drop()
-	%TakingAudioPlayer.play()
-	if  hands.snatch_attempt_player.playing:
-		# Stop the Wizard from talking
-		hands.snatch_attempt_player.stop()
+	hands.item_dropped.emit()
+	Sfx.set_stream(taking_audio)
+	Sfx.play()
+
 	snatched_alarm.deactivate()
 
 

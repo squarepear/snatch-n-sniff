@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var sniff_goal := 2
+@export var sniff_goal := 20
 @export var failure_goal := 3
 
 var num_sniffed := 0
@@ -20,7 +20,7 @@ func _update_smacked_label() -> void:
 
 func _check_for_win() -> void:
 	if num_sniffed >= sniff_goal:
-		get_tree().change_scene_to_file("res://main_menu/victory_screen.tscn")
+		get_tree().call_deferred("change_scene_to_file", "res://main_menu/main_menu.tscn")
 
 
 func _check_for_lose() -> void:
