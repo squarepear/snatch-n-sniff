@@ -10,6 +10,7 @@ var held_item: SniffdexEntry
 @onready var hand_texture :Texture2D= texture_rect.texture
 @onready var start_position :int= texture_rect.position.x
 @onready var snatch_detector := $SnatchDetector
+@onready var snatched_alarm: AudioStreamPlayer = $SnatchedAlarm
 
 
 func snatch() -> void:
@@ -26,6 +27,7 @@ func snatch() -> void:
 		return
 	held_item = snatchable.sniffdex_entry
 	texture_rect.texture = held_item.hand_sprite
+	snatched_alarm.play()
 	snatched_snatchable.emit(snatchable)
 	snatchable.snatch()
 
