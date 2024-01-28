@@ -23,7 +23,6 @@ var has_sniffed := false:
 
 
 func _ready():
-	Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 	sniff_timer.timeout.connect(sniff_complete)
 
 func _physics_process(delta):
@@ -92,8 +91,6 @@ func get_speed() -> float:
 func _input(event: InputEvent):
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * 0.005)
-	if event.is_action_pressed("ui_cancel"):
-		get_tree().quit() #im gamer
 	if event.is_action_pressed("snatch"):
 		hands.snatch()
 	if event.is_action_pressed("sniff"):
