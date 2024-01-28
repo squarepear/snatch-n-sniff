@@ -189,17 +189,6 @@ script = ExtResource("5_lasn3")
 sprite3d = NodePath("../Sprite")
 sniffdex_entry = ExtResource("6_14klo")
 
-[node name="Wizard2" parent="World" instance=ExtResource("3_m0ktx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3817, 0, 4.85099)
-sprite_texture = ExtResource("4_cfeve")
-taking_audio = ExtResource("8_i7jfc")
-snatch_attempt_audio = ExtResource("9_jinl1")
-
-[node name="Snatchable" type="Node" parent="World/Wizard2" node_paths=PackedStringArray("sprite3d")]
-script = ExtResource("5_lasn3")
-sprite3d = NodePath("../../Wizard/Sprite")
-sniffdex_entry = ExtResource("6_14klo")
-
 [node name="Peasant" parent="World" instance=ExtResource("3_m0ktx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00101, -0.053484, 6.00074)
 sprite_texture = ExtResource("7_vssvw")
@@ -319,7 +308,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00101, -0.053484, -23.7062)
 sprite_texture = ExtResource("24_o6gwv")
 
 [node name="Snakes2" parent="World" instance=ExtResource("3_m0ktx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.52241, -0.053484, -10.4197)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.30415, -0.053484, -23.5471)
 sprite_texture = ExtResource("24_o6gwv")
 
 [node name="Clipboard" parent="World" instance=ExtResource("34_tpm8u")]
@@ -394,4 +383,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.629, 1.22528, -12.6187)
 [connection signal="sniffed" from="World/Player" to="World/EndTracker" method="_on_player_sniffed"]
 
 [editable path="World/Wizard"]
-[editable path="World/Wizard2"]
