@@ -11,11 +11,7 @@ const JUMP_VELOCITY := 4.5
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var is_sniffing := false
-var has_sniffed := false:
-	set(newValue):
-		has_sniffed = newValue
-		if has_sniffed:
-			sniffed.emit()
+var has_sniffed := false
 
 @onready var sniff_timer := %SniffTimer
 @onready var sniff_noises := %SniffNoises
@@ -83,6 +79,7 @@ func stop_sniffing() -> void:
 		sniff_noises.stop()
 		return
 	hands.drop()
+	sniffed.emit()
 	has_sniffed = false
 	
 
