@@ -10,5 +10,5 @@ script = ExtResource("1_873u1")
 name = "EvilPenny"
 sprite = ExtResource("2_d4g5w")
 hand_sprite = ExtResource("1_1j4iy")
-sniff_time = 0.5
+sniff_time = 1.6
 sniff_noise = ExtResource("3_ac4tg")
