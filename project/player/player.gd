@@ -61,6 +61,7 @@ func start_sniffing() -> void:
 	sniff_timer.start(hands.held_item.sniff_time)
 	is_sniffing = true
 	sniff_noises.stream = hands.held_item.sniff_noise
+	_resize_hand(1.5)
 	sniff_noises.play()
 
 
@@ -70,11 +71,13 @@ func sniff_complete() -> void:
 	has_sniffed = true
 	# Shut up the Wizard
 	Sfx.stop()
+	_resize_hand(1.)
 
 
 func stop_sniffing() -> void:
 	if not is_sniffing:
 		return
+	_resize_hand(1.)	
 	is_sniffing = false
 	hands.reset_position()
 	if not has_sniffed:
@@ -86,6 +89,8 @@ func stop_sniffing() -> void:
 	has_sniffed = false
 	
 
+func _resize_hand(size:float):
+	$Hands/HandTexture.scale = Vector2(size,size)
 
 func get_speed() -> float:
 	return SPEED * (SNIFF_SPEED_MULTIPLIER if is_sniffing else 1.0)
