@@ -44,10 +44,8 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, get_speed())
 		velocity.z = move_toward(velocity.z, 0, get_speed())
 	
-	if has_sniffed:
-		hands.shake(8.0, delta)
-	elif is_sniffing:
-		hands.shake(1.0, delta)
+	if is_sniffing and not has_sniffed:
+		hands.shake(10.0, delta)
 	
 	move_and_slide()
 
