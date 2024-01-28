@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdtujo6st3ima"]
+[gd_scene load_steps=6 format=3 uid="uid://cdtujo6st3ima"]
 
 [ext_resource type="Script" path="res://people/people.gd" id="1_er30i"]
 [ext_resource type="Texture2D" uid="uid://ee5xcspx4oxl" path="res://people/man.png" id="2_et4eg"]
@@ -8,6 +8,10 @@ height = 2.56
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_i16ww"]
 size = Vector3(1, 2, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_4h7dn"]
+radius = 0.4
+height = 0.25
 
 [node name="People" type="CharacterBody3D"]
 collision_layer = 12
@@ -33,3 +37,8 @@ collision_mask = 2
 
 [node name="TakingAudioPlayer" type="AudioStreamPlayer3D" parent="."]
 unique_name_in_owner = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0)
+cast_shadow = 3
+mesh = SubResource("SphereMesh_4h7dn")

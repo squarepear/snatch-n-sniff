@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://daqc43oempgnp"]
+[gd_scene load_steps=6 format=3 uid="uid://daqc43oempgnp"]
 
 [ext_resource type="PackedScene" uid="uid://hki42ukt5d36" path="res://convention/convention_center.blend" id="1_qh047"]
 [ext_resource type="PackedScene" uid="uid://lnwogpjkn7xi" path="res://convention/light/convention_light.tscn" id="2_fpypp"]
+[ext_resource type="Texture2D" uid="uid://ce8yb1imqpjw8" path="res://main_menu/Title_Banner.png" id="3_rl2cv"]
+[ext_resource type="PackedScene" uid="uid://bu12kkk7833ot" path="res://convention/booth/booth.blend" id="4_2ixit"]
 
 [sub_resource type="Environment" id="Environment_hswp2"]
 ambient_light_source = 2
@@ -86,3 +88,117 @@ transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 
 
 [node name="SpotLight3D22" parent="Lights" instance=ExtResource("2_fpypp")]
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, -29.6267, 5.5, -18.844)
+
+[node name="Booths" type="Node3D" parent="."]
+
+[node name="Booth" parent="Booths" instance=ExtResource("4_2ixit")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2179, 0, 28.3353)
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths/Booth"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
+pixel_size = 0.002
+texture = ExtResource("3_rl2cv")
+
+[node name="Booth2" parent="Booths" instance=ExtResource("4_2ixit")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2179, 0, 22.0778)
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths/Booth2"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
+pixel_size = 0.002
+texture = ExtResource("3_rl2cv")
+
+[node name="Booth3" parent="Booths" instance=ExtResource("4_2ixit")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2179, 0, -27.2281)
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths/Booth3"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
+pixel_size = 0.002
+texture = ExtResource("3_rl2cv")
+
+[node name="Booth4" parent="Booths" instance=ExtResource("4_2ixit")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2179, 0, -20.8335)
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths/Booth4"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
+pixel_size = 0.002
+texture = ExtResource("3_rl2cv")
+
+[node name="Booth5" parent="Booths" instance=ExtResource("4_2ixit")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12.2324, 0, -27.1089)
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths/Booth5"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
+pixel_size = 0.002
+texture = ExtResource("3_rl2cv")
+
+[node name="Booth6" parent="Booths" instance=ExtResource("4_2ixit")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12.6103, 0, -20.8628)
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths/Booth6"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
+pixel_size = 0.002
+texture = ExtResource("3_rl2cv")
+
+[node name="Booth7" parent="Booths" instance=ExtResource("4_2ixit")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12.9538, 0, 28.353)
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths/Booth7"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
+pixel_size = 0.002
+texture = ExtResource("3_rl2cv")
+
+[node name="Booth8" parent="Booths" instance=ExtResource("4_2ixit")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -12.5677, 0, 21.9702)
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths/Booth8"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
+pixel_size = 0.002
+texture = ExtResource("3_rl2cv")
+
+[node name="Booth9" parent="Booths" instance=ExtResource("4_2ixit")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 26.8086, 0, -12.6723)
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths/Booth9"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
+pixel_size = 0.002
+texture = ExtResource("3_rl2cv")
+
+[node name="Booth10" parent="Booths" instance=ExtResource("4_2ixit")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.5513, 0, -12.6277)
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths/Booth10"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
+pixel_size = 0.002
+texture = ExtResource("3_rl2cv")
+
+[node name="Booth13" parent="Booths" instance=ExtResource("4_2ixit")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -28.46, 0, 12.1722)
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths/Booth13"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
+pixel_size = 0.002
+texture = ExtResource("3_rl2cv")
+
+[node name="Booth14" parent="Booths" instance=ExtResource("4_2ixit")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -22.2114, 0, 12.5055)
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths/Booth14"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
+pixel_size = 0.002
+texture = ExtResource("3_rl2cv")
+
+[node name="Booth15" parent="Booths" instance=ExtResource("4_2ixit")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 27.0272, 0.0222571, 12.42)
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths/Booth15"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
+pixel_size = 0.002
+texture = ExtResource("3_rl2cv")
+
+[node name="Booth16" parent="Booths" instance=ExtResource("4_2ixit")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 20.6418, 0.0222571, 12.0793)
+
+[node name="Sprite3D" type="Sprite3D" parent="Booths/Booth16"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.03035, 2.92636, -0.00137138)
+pixel_size = 0.002
+texture = ExtResource("3_rl2cv")
