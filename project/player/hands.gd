@@ -2,6 +2,7 @@ class_name Hands
 extends Node3D
 
 signal snatched_snatchable(snatchable: Snatchable)
+signal item_dropped
 
 var held_item: SniffdexEntry
 
@@ -33,6 +34,7 @@ func snatch() -> void:
 func drop() -> void:
 	texture_rect.texture = hand_texture
 	held_item = null
+	item_dropped.emit()
 
 
 func shake(amount: float, delta: float) -> void:

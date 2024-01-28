@@ -52,4 +52,5 @@ unique_name_in_owner = true
 [node name="SniffTimer" type="Timer" parent="."]
 unique_name_in_owner = true
 
+[connection signal="item_dropped" from="Hands" to="." method="_on_hands_item_dropped"]
 [connection signal="snatched_snatchable" from="Hands" to="." method="_on_hands_snatched_snatchable"]

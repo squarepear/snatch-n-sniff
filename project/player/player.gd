@@ -3,6 +3,7 @@ extends CharacterBody3D
 
 signal snatched_snatchable(snatchable: Snatchable)
 signal sniffed
+signal item_dropped
 
 const SPEED := 5.0
 const SNIFF_SPEED_MULTIPLIER := 0.25
@@ -102,3 +103,7 @@ func _input(event: InputEvent):
 func _on_hands_snatched_snatchable(snatchable:Snatchable):
 	snatched_snatchable.emit(snatchable)
 
+
+
+func _on_hands_item_dropped():
+	item_dropped.emit()

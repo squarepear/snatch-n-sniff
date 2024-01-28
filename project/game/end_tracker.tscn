@@ -11,3 +11,12 @@ offset_right = 207.0
 offset_bottom = 74.0
 theme_override_font_sizes/font_size = 36
 text = "Objects Sniffed: X/Y"
+
+[node name="TimesSmacked" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 1604.0
+offset_top = 11.0
+offset_right = 1912.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 36
+text = "Times Caught: x/y"
