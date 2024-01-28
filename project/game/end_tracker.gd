@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var sniff_goal := 5
+@export var sniff_goal := 15
 @export var failure_goal := 3
 
 var num_sniffed := 0
